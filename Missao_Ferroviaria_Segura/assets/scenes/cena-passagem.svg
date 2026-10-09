@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Cena de passagem de nível: a família espera atrás da cancela fechada, com luzes vermelhas acesas, enquanto o trem passa pela via">
+  <defs>
+    <linearGradient id="skyN" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe0f7"/>
+      <stop offset="1" stop-color="#eaf6f1"/>
+    </linearGradient>
+    <linearGradient id="trainN" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dce8f2"/>
+    </linearGradient>
+    <linearGradient id="yelN" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffdd70"/>
+      <stop offset="1" stop-color="#efb72c"/>
+    </linearGradient>
+    <radialGradient id="lampG" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff8a80"/>
+      <stop offset="1" stop-color="#ff8a80" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shN" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#skyN)"/>
+  <!-- sol suave -->
+  <circle cx="690" cy="70" r="70" fill="#fff4d0" opacity="0.9"/>
+  <circle cx="690" cy="70" r="44" fill="#ffe9a3"/>
+
+  <!-- árvores e vegetação ao fundo -->
+  <g fill="#8fc9a6">
+    <circle cx="90" cy="200" r="56"/>
+    <circle cx="150" cy="220" r="44"/>
+    <circle cx="640" cy="212" r="52"/>
+    <circle cx="720" cy="228" r="42"/>
+  </g>
+  <g fill="#6fb68c">
+    <circle cx="90" cy="216" r="44"/>
+    <circle cx="640" cy="226" r="42"/>
+  </g>
+  <rect y="252" width="800" height="248" fill="#b9cf9e"/>
+  <rect y="252" width="800" height="248" fill="#a8c18e" opacity="0.5"/>
+
+  <!-- ============ VIA FERROVIÁRIA ============ -->
+  <g>
+    <rect y="256" width="800" height="64" fill="#aeb9c5"/>
+    <g fill="#96a2af">
+      <rect x="20" y="262" width="14" height="52" rx="3"/><rect x="90" y="262" width="14" height="52" rx="3"/>
+      <rect x="160" y="262" width="14" height="52" rx="3"/><rect x="230" y="262" width="14" height="52" rx="3"/>
+      <rect x="300" y="262" width="14" height="52" rx="3"/><rect x="370" y="262" width="14" height="52" rx="3"/>
+      <rect x="440" y="262" width="14" height="52" rx="3"/><rect x="510" y="262" width="14" height="52" rx="3"/>
+      <rect x="580" y="262" width="14" height="52" rx="3"/><rect x="650" y="262" width="14" height="52" rx="3"/>
+      <rect x="720" y="262" width="14" height="52" rx="3"/><rect x="790" y="262" width="14" height="52" rx="3"/>
+    </g>
+    <g stroke="#7f8b98" stroke-width="6">
+      <line x1="0" y1="272" x2="800" y2="272"/>
+      <line x1="0" y1="306" x2="800" y2="306"/>
+    </g>
+  </g>
+
+  <!-- ============ TREM PASSANDO ============ -->
+  <g>
+    <!-- linhas de movimento -->
+    <g stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.85">
+      <line x1="20" y1="180" x2="90" y2="180"/>
+      <line x1="8" y1="212" x2="70" y2="212"/>
+      <line x1="26" y1="240" x2="86" y2="240"/>
+    </g>
+    <path d="M 96 260 L 96 168 Q 96 140 134 136 L 740 122 Q 792 120 794 152 L 796 260 Z" fill="url(#trainN)"/>
+    <path d="M 96 260 L 96 214 L 796 206 L 796 260 Z" fill="#4a90d9"/>
+    <path d="M 96 260 L 96 246 L 796 242 L 796 260 Z" fill="#2f6cb5"/>
+    <rect x="96" y="218" width="700" height="9" fill="#f5c542" opacity="0.9"/>
+    <g fill="#bfe0f7" stroke="#9ec7e8" stroke-width="4">
+      <rect x="132" y="152" width="84" height="44" rx="13"/>
+      <rect x="242" y="150" width="84" height="44" rx="13"/>
+      <rect x="352" y="148" width="84" height="44" rx="13"/>
+      <rect x="462" y="146" width="84" height="44" rx="13"/>
+      <rect x="572" y="144" width="84" height="44" rx="13"/>
+      <rect x="682" y="142" width="84" height="44" rx="13"/>
+    </g>
+    <g fill="#ffffff" opacity="0.55">
+      <rect x="140" y="158" width="26" height="13" rx="6"/>
+      <rect x="250" y="156" width="26" height="13" rx="6"/>
+      <rect x="360" y="154" width="26" height="13" rx="6"/>
+      <rect x="470" y="152" width="26" height="13" rx="6"/>
+      <rect x="580" y="150" width="26" height="13" rx="6"/>
+      <rect x="690" y="148" width="26" height="13" rx="6"/>
+    </g>
+    <!-- farol -->
+    <circle cx="110" cy="196" r="9" fill="#ffe9a3"/>
+  </g>
+
+  <!-- ============ ESTRADA ============ -->
+  <path d="M 230 500 L 268 320 L 560 320 L 640 500 Z" fill="#9aa7b4"/>
+  <path d="M 230 500 L 268 320 L 560 320 L 640 500 Z" fill="#8d9aa8" opacity="0.55"/>
+  <g stroke="#f4f7fa" stroke-width="8" stroke-dasharray="26 22" stroke-linecap="round">
+    <line x1="436" y1="500" x2="416" y2="326"/>
+  </g>
+  <!-- área amarela da passagem -->
+  <path d="M 262 322 L 566 322 L 574 356 L 254 356 Z" fill="url(#yelN)" opacity="0.9"/>
+
+  <!-- ============ SEMÁFORO / LUZES ============ -->
+  <g transform="translate(126,214)">
+    <rect x="-8" y="0" width="16" height="176" rx="7" fill="#5f6f80"/>
+    <rect x="-34" y="-76" width="68" height="84" rx="16" fill="#3d4c5e"/>
+    <circle cx="0" cy="-48" r="26" fill="url(#lampG)"/>
+    <circle cx="0" cy="-48" r="15" fill="#ff5f52"/>
+    <circle cx="-5" cy="-53" r="5" fill="#ffffff" opacity="0.85"/>
+    <circle cx="0" cy="-14" r="13" fill="#2b3947"/>
+    <rect x="-52" y="176" width="104" height="14" rx="7" fill="#4a5866"/>
+    <text x="0" y="-96" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#c4574c">ATENÇÃO</text>
+  </g>
+
+  <!-- ============ CANCELA FECHADA ============ -->
+  <g>
+    <rect x="176" y="316" width="20" height="150" rx="9" fill="#5f6f80"/>
+    <rect x="160" y="462" width="52" height="16" rx="8" fill="#4a5866"/>
+    <!-- braço -->
+    <g>
+      <rect x="186" y="330" width="500" height="20" rx="10" fill="#ffffff" stroke="#4a5866" stroke-width="3"/>
+      <g fill="#e8756a">
+        <rect x="222" y="332" width="34" height="16" rx="3"/>
+        <rect x="304" y="332" width="34" height="16" rx="3"/>
+        <rect x="386" y="332" width="34" height="16" rx="3"/>
+        <rect x="468" y="332" width="34" height="16" rx="3"/>
+        <rect x="550" y="332" width="34" height="16" rx="3"/>
+        <rect x="632" y="332" width="34" height="16" rx="3"/>
+      </g>
+      <circle cx="186" cy="340" r="15" fill="#ffd166" stroke="#4a5866" stroke-width="3"/>
+    </g>
+    <!-- contra-peso -->
+    <rect x="678" y="322" width="26" height="36" rx="8" fill="#4a5866"/>
+  </g>
+
+  <!-- placa da passagem -->
+  <g transform="translate(646,378)">
+    <rect x="0" y="0" width="128" height="74" rx="12" fill="#ffffff" stroke="#e8756a" stroke-width="5"/>
+    <text x="64" y="30" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#c4574c">PARE</text>
+    <text x="64" y="52" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#55708b">OLHE E ESCUTE</text>
+    <rect x="58" y="74" width="12" height="64" fill="#8fb6d9"/>
+  </g>
+
+  <!-- ============ FAMÍLIA ESPERANDO ATRÁS DA CANCELA ============ -->
+  <!-- pai -->
+  <g transform="translate(300,374) scale(0.6)">
+    <ellipse cx="0" cy="176" rx="50" ry="11" fill="#5f748a" opacity="0.3" filter="url(#shN)"/>
+    <path d="M -16 108 L -19 166" stroke="#3d4c5e" stroke-width="23" stroke-linecap="round"/>
+    <path d="M 16 108 L 19 166" stroke="#3d4c5e" stroke-width="23" stroke-linecap="round"/>
+    <ellipse cx="-23" cy="174" rx="18" ry="9" fill="#37414d"/>
+    <ellipse cx="23" cy="174" rx="18" ry="9" fill="#37414d"/>
+    <path d="M -32 56 Q -47 82 -43 112" stroke="#4fa3a5" stroke-width="19" stroke-linecap="round" fill="none"/>
+    <circle cx="-43" cy="116" r="9.5" fill="#8d5a38"/>
+    <path d="M 32 56 Q 46 84 42 112" stroke="#4fa3a5" stroke-width="19" stroke-linecap="round" fill="none"/>
+    <circle cx="42" cy="116" r="9.5" fill="#8d5a38"/>
+    <path d="M -36 110 L -36 56 Q -36 37 -19 32 L 0 44 L 19 32 Q 36 37 36 56 L 36 110 Z" fill="#4fa3a5"/>
+    <path d="M -11 34 L 0 45 L 11 34 L 7 58 L -7 58 Z" fill="#e8f4f4"/>
+    <rect x="-9" y="20" width="18" height="18" rx="7" fill="#6d4226"/>
+    <g>
+      <ellipse cx="0" cy="0" rx="27.5" ry="29.5" fill="#8d5a38"/>
+      <ellipse cx="-9.5" cy="-1" rx="7.2" ry="8.2" fill="#ffffff"/>
+      <ellipse cx="9.5" cy="-1" rx="7.2" ry="8.2" fill="#ffffff"/>
+      <circle cx="-9" cy="0" r="4.5" fill="#2e2119"/>
+      <circle cx="10" cy="0" r="4.5" fill="#2e2119"/>
+      <circle cx="-10.6" cy="-2" r="1.7" fill="#ffffff"/>
+      <circle cx="8.4" cy="-2" r="1.7" fill="#ffffff"/>
+      <path d="M -16 -12 Q -10 -16 -4 -13" stroke="#241a14" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+      <path d="M 4 -13 Q 10 -16 16 -12" stroke="#241a14" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+      <path d="M -9 17 Q 0 26 9 17 Q 0 21 -9 17 Z" fill="#4b2f24"/>
+      <path d="M -7 18 Q 0 21.5 7 18 Q 0 20 -7 18 Z" fill="#ffffff"/>
+      <path d="M -27 -2 C -30 -30 -12 -38 0 -38 C 14 -38 30 -30 27 -2 C 22 -18 11 -22 0 -22 C -12 -22 -22 -18 -27 -2 Z" fill="#241a14"/>
+    </g>
+  </g>
+
+  <!-- mãe -->
+  <g transform="translate(368,380) scale(0.58)">
+    <ellipse cx="0" cy="172" rx="50" ry="11" fill="#5f748a" opacity="0.3" filter="url(#shN)"/>
+    <path d="M -28 -6 C -40 30 -36 76 -30 96 L 30 96 C 36 76 40 30 28 -6 Z" fill="#2e2119"/>
+    <path d="M -15 106 L -18 162" stroke="#4e6e8e" stroke-width="21" stroke-linecap="round"/>
+    <path d="M 15 106 L 18 162" stroke="#4e6e8e" stroke-width="21" stroke-linecap="round"/>
+    <ellipse cx="-22" cy="170" rx="17" ry="9" fill="#ffffff" stroke="#d3dfeb" stroke-width="3"/>
+    <ellipse cx="22" cy="170" rx="17" ry="9" fill="#ffffff" stroke="#d3dfeb" stroke-width="3"/>
+    <path d="M -30 54 Q -44 80 -40 108" stroke="#e98f7d" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <circle cx="-40" cy="112" r="9" fill="#f0c69c"/>
+    <path d="M 30 54 Q 44 78 42 104" stroke="#e98f7d" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <circle cx="43" cy="108" r="9" fill="#f0c69c"/>
+    <path d="M -34 108 L -34 54 Q -34 36 -18 31 L 0 42 L 18 31 Q 34 36 34 54 L 34 108 Z" fill="#e98f7d"/>
+    <rect x="-9" y="20" width="18" height="18" rx="7" fill="#d9a06f"/>
+    <g>
+      <ellipse cx="0" cy="0" rx="27" ry="29" fill="#f0c69c"/>
+      <ellipse cx="-9.5" cy="-1" rx="7.2" ry="8.4" fill="#ffffff"/>
+      <ellipse cx="9.5" cy="-1" rx="7.2" ry="8.4" fill="#ffffff"/>
+      <circle cx="-9" cy="0" r="4.5" fill="#3a2a20"/>
+      <circle cx="10" cy="0" r="4.5" fill="#3a2a20"/>
+      <circle cx="-10.6" cy="-2" r="1.7" fill="#ffffff"/>
+      <circle cx="8.4" cy="-2" r="1.7" fill="#ffffff"/>
+      <path d="M -16 -12 Q -10 -16 -4 -13" stroke="#2e2119" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 4 -13 Q 10 -16 16 -12" stroke="#2e2119" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M -9 16 Q 0 26 9 16 Q 0 20.5 -9 16 Z" fill="#a0574c"/>
+      <path d="M -7 17.5 Q 0 21 7 17.5 Q 0 19.5 -7 17.5 Z" fill="#ffffff"/>
+      <path d="M -27 -4 C -31 -32 -12 -41 0 -41 C 14 -41 31 -32 27 -4 C 22 -20 12 -24 0 -24 C -12 -24 -22 -18 -27 -4 Z" fill="#2e2119"/>
+    </g>
+  </g>
+
+  <!-- criança -->
+  <g transform="translate(430,392) scale(0.6)">
+    <ellipse cx="0" cy="140" rx="44" ry="10" fill="#5f748a" opacity="0.3" filter="url(#shN)"/>
+    <rect x="-32" y="34" width="16" height="52" rx="8" fill="#4a90d9"/>
+    <path d="M -13 84 L -16 128" stroke="#46617f" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 13 84 L 16 128" stroke="#46617f" stroke-width="18" stroke-linecap="round"/>
+    <ellipse cx="-20" cy="135" rx="15" ry="8" fill="#ffffff" stroke="#4a90d9" stroke-width="3"/>
+    <ellipse cx="20" cy="135" rx="15" ry="8" fill="#ffffff" stroke="#4a90d9" stroke-width="3"/>
+    <path d="M -26 46 Q -38 68 -34 92" stroke="#f5c542" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <circle cx="-34" cy="95" r="8" fill="#fbd9b7"/>
+    <path d="M 26 46 Q 38 66 36 88" stroke="#f5c542" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <circle cx="37" cy="91" r="8" fill="#fbd9b7"/>
+    <path d="M -29 88 L -29 44 Q -29 28 -15 24 L 0 33 L 15 24 Q 29 28 29 44 L 29 88 Z" fill="#f5c542"/>
+    <path d="M -15 25 L 0 35 L 15 25 L 11 48 L -11 48 Z" fill="#fff8e2"/>
+    <rect x="-8" y="14" width="16" height="16" rx="7" fill="#eeba90"/>
+    <g>
+      <ellipse cx="0" cy="0" rx="24.5" ry="26" fill="#fbd9b7"/>
+      <ellipse cx="-8.5" cy="-1" rx="6.6" ry="7.6" fill="#ffffff"/>
+      <ellipse cx="8.5" cy="-1" rx="6.6" ry="7.6" fill="#ffffff"/>
+      <circle cx="-8" cy="0" r="4.2" fill="#4a3728"/>
+      <circle cx="9" cy="0" r="4.2" fill="#4a3728"/>
+      <circle cx="-9.5" cy="-1.8" r="1.6" fill="#ffffff"/>
+      <circle cx="7.5" cy="-1.8" r="1.6" fill="#ffffff"/>
+      <path d="M -14 -11 Q -9 -14.5 -4 -12" stroke="#3b2a1f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <path d="M 4 -12 Q 9 -14.5 14 -11" stroke="#3b2a1f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <path d="M -8 14 Q 0 23 8 14 Q 0 18 -8 14 Z" fill="#7d3f3a"/>
+      <path d="M -6.5 15 Q 0 18.5 6.5 15 Q 0 17 -6.5 15 Z" fill="#ffffff"/>
+      <path d="M -25 -3 C -28 -27 -11 -34 0 -34 C 13 -34 28 -27 25 -3 C 20 -17 11 -21 0 -21 C -11 -21 -20 -16 -25 -3 Z" fill="#3b2a1f"/>
+    </g>
+  </g>
+</svg>

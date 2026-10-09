@@ -1,0 +1,6 @@
+Esta pasta (assets/images) é destinada a imagens gerais do jogo:
+logotipos, ícones, fundos extras e imagens de perguntas futuras
+que não sejam cenas ou personagens.
+
+As cenas ficam em  assets/scenes  e os personagens em
+assets/characters.

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Lipe, o amigo que ensina segurança ferroviária">
+  <title>Lipe — personagem-guia</title>
+  <defs>
+    <linearGradient id="gSkin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe7d1" /><stop offset=".55" stop-color="#f9c9a4" /><stop offset="1" stop-color="#eda77c" />
+    </linearGradient>
+    <radialGradient id="gSkinShade" cx=".45" cy=".35" r=".85">
+      <stop offset="0" stop-color="#e39a6e" stop-opacity="0" /><stop offset="1" stop-color="#c8784a" stop-opacity=".5" />
+    </radialGradient>
+    <radialGradient id="gBlush">
+      <stop offset="0" stop-color="#ff8c70" stop-opacity=".7" /><stop offset="1" stop-color="#ff8c70" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="gHair" x1="0" y1="0" x2=".15" y2="1">
+      <stop offset="0" stop-color="#8a6138" /><stop offset=".6" stop-color="#68462a" /><stop offset="1" stop-color="#4e3120" />
+    </linearGradient>
+    <linearGradient id="gHairFringe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9a7042" /><stop offset="1" stop-color="#5b3b24" />
+    </linearGradient>
+    <linearGradient id="gHood" x1="0" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#1ad3c6" /><stop offset=".5" stop-color="#0fb5ac" /><stop offset="1" stop-color="#0a8f88" />
+    </linearGradient>
+    <linearGradient id="gHoodDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#078c85" /><stop offset="1" stop-color="#07524e" />
+    </linearGradient>
+    <radialGradient id="gIris" cx=".35" cy=".3" r=".9">
+      <stop offset="0" stop-color="#b8773c" /><stop offset=".55" stop-color="#8a4d1f" /><stop offset="1" stop-color="#5a3317" />
+    </radialGradient>
+    <radialGradient id="gBack" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffe9d2" stop-opacity=".55" /><stop offset=".6" stop-color="#ffdbb4" stop-opacity=".18" /><stop offset="1" stop-color="#ffdbb4" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <circle cx="120" cy="118" r="112" fill="url(#gBack)" />
+
+  <!-- Moletom moderno com rim light -->
+  <path d="M58 240 L58 218 C58 198 84 188 120 188 C156 188 182 198 182 218 L182 240 Z" fill="url(#gHood)" />
+  <path d="M120 188 C156 188 182 198 182 218 L182 240 L120 240 Z" fill="url(#gHoodDark)" opacity=".4" />
+  <ellipse cx="120" cy="193" rx="24" ry="9" fill="#07524e" />
+  <path d="M62 216 C70 196 92 190 112 189" stroke="#9ff2eb" stroke-width="5" fill="none" stroke-linecap="round" opacity=".55" />
+  <path d="M120 193 L120 240" stroke="#0a645e" stroke-width="2.5" opacity=".8" />
+  <path d="M97 220 C97 208 106 203 120 203 C134 203 143 208 143 220 L143 238 L97 238 Z" fill="#0a8f88" stroke="#087a74" stroke-width="2" />
+  <path d="M92 190 Q92 200 100 204" stroke="#9ff2eb" stroke-width="3" fill="none" stroke-linecap="round" opacity=".4" />
+
+  <!-- Cabeça -->
+  <path d="M104 168 L106 194 Q120 202 134 194 L136 168 Q120 158 104 168 Z" fill="url(#gSkin)" />
+  <ellipse cx="42" cy="112" rx="15" ry="22" fill="url(#gSkin)" />
+  <ellipse cx="42" cy="112" rx="7" ry="12" fill="#e09a70" opacity=".55" />
+  <ellipse cx="198" cy="112" rx="15" ry="22" fill="url(#gSkin)" />
+  <ellipse cx="198" cy="112" rx="7" ry="12" fill="#e09a70" opacity=".55" />
+  <path d="M120 30 C168 30 200 72 200 128 C200 176 170 199 120 199 C70 199 40 176 40 128 C40 72 72 30 120 30 Z" fill="url(#gSkin)" />
+  <path d="M52 96 C46 74 58 50 84 38" stroke="#fff1e3" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7" />
+  <path d="M120 199 C164 199 196 178 198 142 L198 142 C198 180 158 204 120 204 C82 204 42 180 42 142 C44 178 76 199 120 199 Z" fill="url(#gSkinShade)" />
+
+  <!-- Cabelo em volume, com mechas e brilho -->
+  <path d="M40 118 C40 62 76 30 120 30 C164 30 200 62 200 118 Q120 96 40 118 Z" fill="url(#gHair)" />
+  <path d="M40 118 L40 78 C44 132 54 136 58 130 L60 102 C48 108 42 112 40 118 Z" fill="url(#gHair)" />
+  <path d="M200 118 L200 78 C196 132 186 136 182 130 L180 102 C192 108 198 112 200 118 Z" fill="url(#gHair)" />
+  <path d="M52 108 C50 72 72 46 104 40 C84 50 70 66 68 88 C64 100 58 105 52 108 Z" fill="url(#gHairFringe)" />
+  <path d="M120 32 C146 32 176 42 190 64 C180 46 158 40 140 44 C122 48 112 58 108 68 C110 48 110 40 120 32 Z" fill="url(#gHairFringe)" />
+  <path d="M126 32 C148 34 168 46 174 60 C166 48 148 42 130 44 C124 44 122 46 118 48 C120 42 122 37 126 32 Z" fill="#bd8c58" opacity=".9" />
+
+  <!-- Olhos grandes e brilhantes -->
+  <ellipse cx="90" cy="128" rx="19" ry="22" fill="#fff" />
+  <ellipse cx="150" cy="128" rx="19" ry="22" fill="#fff" />
+  <ellipse cx="90" cy="131" rx="10" ry="11.5" fill="url(#gIris)" />
+  <ellipse cx="150" cy="131" rx="10" ry="11.5" fill="url(#gIris)" />
+  <ellipse cx="90" cy="131" rx="6" ry="6.8" fill="#24140c" />
+  <ellipse cx="150" cy="131" rx="6" ry="6.8" fill="#24140c" />
+  <circle cx="85" cy="126" r="3.6" fill="#fff" />
+  <circle cx="145" cy="126" r="3.6" fill="#fff" />
+  <circle cx="94" cy="137" r="1.9" fill="#fff" opacity=".85" />
+  <circle cx="154" cy="137" r="1.9" fill="#fff" opacity=".85" />
+
+  <!-- Nariz pequeno e estilizado -->
+  <path d="M118 137 Q128 151 138 153" stroke="#e09c70" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".7" />
+  <circle cx="137" cy="152" r="2.6" fill="#fff" opacity=".6" />
+
+  <!-- Bochechas -->
+  <ellipse cx="71" cy="143" rx="12" ry="7" fill="url(#gBlush)" />
+  <ellipse cx="169" cy="143" rx="12" ry="7" fill="url(#gBlush)" />
+
+  <!-- Expressão: alegria (sorriso aberto e sobrancelhas arqueadas) -->
+  <path d="M74 101 Q88 92 102 99" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+  <path d="M138 99 Q152 92 166 101" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+  <path d="M94 160 C104 178 136 178 146 160 C134 169 106 169 94 160 Z" fill="#7c2a20" />
+  <path d="M100 161 L140 161 C132 166 108 166 100 161 Z" fill="#fff" />
+  <ellipse cx="120" cy="172" rx="12" ry="6" fill="#ff8f86" />
+</svg>

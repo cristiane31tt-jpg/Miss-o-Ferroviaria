@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MISSÃO FERROVIÁRIA SEGURA — Jogo Educativo</title>
+  <meta name="description" content="Jogo educativo infantil sobre segurança ferroviária: plataformas, embarque, desembarque e passagens de nível." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2326325e'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%23ffcf5c'%3E%E2%9A%9E%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- ==================== PERSONAGEM LIPE (recursos de arte) ====================
+         Gradientes de "iluminação cinematográfica" e o modelo do Lipe ficam aqui,
+         reutilizados em todas as telas — assim o mesmo Lipe aparece em todo o jogo.
+         ========================================================================= -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="gSkin" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffe7d1" /><stop offset=".55" stop-color="#f9c9a4" /><stop offset="1" stop-color="#eda77c" />
+        </linearGradient>
+        <radialGradient id="gSkinShade" cx=".45" cy=".35" r=".85">
+          <stop offset="0" stop-color="#e39a6e" stop-opacity="0" /><stop offset="1" stop-color="#c8784a" stop-opacity=".5" />
+        </radialGradient>
+        <radialGradient id="gBlush">
+          <stop offset="0" stop-color="#ff8c70" stop-opacity=".7" /><stop offset="1" stop-color="#ff8c70" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="gHair" x1="0" y1="0" x2=".15" y2="1">
+          <stop offset="0" stop-color="#8a6138" /><stop offset=".6" stop-color="#68462a" /><stop offset="1" stop-color="#4e3120" />
+        </linearGradient>
+        <linearGradient id="gHairFringe" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#9a7042" /><stop offset="1" stop-color="#5b3b24" />
+        </linearGradient>
+        <linearGradient id="gHood" x1="0" y1="0" x2=".85" y2="1">
+          <stop offset="0" stop-color="#1ad3c6" /><stop offset=".5" stop-color="#0fb5ac" /><stop offset="1" stop-color="#0a8f88" />
+        </linearGradient>
+        <linearGradient id="gHoodDark" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#078c85" /><stop offset="1" stop-color="#07524e" />
+        </linearGradient>
+        <linearGradient id="gShirt" x1="0" y1="0" x2=".9" y2="1">
+          <stop offset="0" stop-color="#ffffff" /><stop offset="1" stop-color="#cfe6e9" />
+        </linearGradient>
+        <radialGradient id="gIris" cx=".35" cy=".3" r=".9">
+          <stop offset="0" stop-color="#b8773c" /><stop offset=".55" stop-color="#8a4d1f" /><stop offset="1" stop-color="#5a3317" />
+        </radialGradient>
+        <linearGradient id="gShadow" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#cf8357" stop-opacity=".55" /><stop offset="1" stop-color="#cf8357" stop-opacity="0" />
+        </linearGradient>
+        <radialGradient id="gBack" cx=".5" cy=".5" r=".5">
+          <stop offset="0" stop-color="#ffe9d2" stop-opacity=".55" /><stop offset=".6" stop-color="#ffdbb4" stop-opacity=".18" /><stop offset="1" stop-color="#ffdbb4" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+    </svg>
+
+    <!-- Lipe: personagem-guia com cara de filme de animação. Cada expressão é uma
+         "camada" que o CSS liga pela regra [data-exp="..."] — alegria, curiosidade,
+         atenção, surpresa, preocupação, comemoração e "quase!". -->
+    <template id="tpl-lipe">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lipe, o amigo que ensina segurança ferroviária">
+        <circle cx="120" cy="118" r="112" fill="url(#gBack)" />
+        <!-- roupas (moletom moderno com rim light) -->
+        <g class="lipe-torso">
+          <path d="M58 240 L58 218 C58 198 84 188 120 188 C156 188 182 198 182 218 L182 240 Z" fill="url(#gHood)" />
+          <path d="M120 188 C156 188 182 198 182 218 L182 240 L120 240 Z" fill="url(#gHoodDark)" opacity=".4" />
+          <ellipse cx="120" cy="193" rx="24" ry="9" fill="#07524e" />
+          <path d="M62 216 C70 196 92 190 112 189" stroke="#9ff2eb" stroke-width="5" fill="none" stroke-linecap="round" opacity=".55" />
+          <path d="M120 193 L120 240" stroke="#0a645e" stroke-width="2.5" opacity=".8" />
+          <path d="M97 220 C97 208 106 203 120 203 C134 203 143 208 143 220 L143 238 L97 238 Z" fill="#0a8f88" stroke="#087a74" stroke-width="2" />
+          <path d="M92 190 Q92 200 100 204" stroke="#9ff2eb" stroke-width="3" fill="none" stroke-linecap="round" opacity=".4" />
+          <path d="M148 190 Q148 200 140 204" stroke="#06413d" stroke-width="3" fill="none" stroke-linecap="round" opacity=".35" />
+        </g>
+        <!-- cabeça -->
+        <g class="lipe-head">
+          <path d="M104 168 L106 194 Q120 202 134 194 L136 168 Q120 158 104 168 Z" fill="url(#gSkin)" />
+          <ellipse cx="42" cy="112" rx="15" ry="22" fill="url(#gSkin)" />
+          <ellipse cx="42" cy="112" rx="7" ry="12" fill="#e09a70" opacity=".55" />
+          <ellipse cx="198" cy="112" rx="15" ry="22" fill="url(#gSkin)" />
+          <ellipse cx="198" cy="112" rx="7" ry="12" fill="#e09a70" opacity=".55" />
+          <path d="M120 30 C168 30 200 72 200 128 C200 176 170 199 120 199 C70 199 40 176 40 128 C40 72 72 30 120 30 Z" fill="url(#gSkin)" />
+          <path d="M52 96 C46 74 58 50 84 38" stroke="#fff1e3" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7" />
+          <path d="M120 199 C164 199 196 178 198 142 L198 142 C198 180 158 204 120 204 C82 204 42 180 42 142 C44 178 76 199 120 199 Z" fill="url(#gSkinShade)" />
+          <!-- cabelo: capuz tridimensional + mechas + brilho -->
+          <path d="M40 118 C40 62 76 30 120 30 C164 30 200 62 200 118 Q120 96 40 118 Z" fill="url(#gHair)" />
+          <path d="M40 118 L40 78 C44 132 54 136 58 130 L60 102 C48 108 42 112 40 118 Z" fill="url(#gHair)" />
+          <path d="M200 118 L200 78 C196 132 186 136 182 130 L180 102 C192 108 198 112 200 118 Z" fill="url(#gHair)" />
+          <path d="M52 108 C50 72 72 46 104 40 C84 50 70 66 68 88 C64 100 58 105 52 108 Z" fill="url(#gHairFringe)" />
+          <path d="M120 32 C146 32 176 42 190 64 C180 46 158 40 140 44 C122 48 112 58 108 68 C110 48 110 40 120 32 Z" fill="url(#gHairFringe)" />
+          <path d="M126 32 C148 34 168 46 174 60 C166 48 148 42 130 44 C124 44 122 46 118 48 C120 42 122 37 126 32 Z" fill="#bd8c58" opacity=".9" />
+          <!-- olhos base (grandes, brilhantes) — o grupo .lipe-eyes desliza para
+               "olhar" na direção certa (data-look) -->
+          <g class="lipe-eyes">
+            <ellipse cx="90" cy="128" rx="19" ry="22" fill="#fff" />
+            <ellipse cx="150" cy="128" rx="19" ry="22" fill="#fff" />
+            <ellipse cx="90" cy="131" rx="10" ry="11.5" fill="url(#gIris)" />
+            <ellipse cx="150" cy="131" rx="10" ry="11.5" fill="url(#gIris)" />
+            <ellipse cx="90" cy="131" rx="6" ry="6.8" fill="#24140c" />
+            <ellipse cx="150" cy="131" rx="6" ry="6.8" fill="#24140c" />
+            <circle cx="85" cy="126" r="3.6" fill="#fff" />
+            <circle cx="145" cy="126" r="3.6" fill="#fff" />
+            <circle cx="94" cy="137" r="1.9" fill="#fff" opacity=".85" />
+            <circle cx="154" cy="137" r="1.9" fill="#fff" opacity=".85" />
+          </g>
+          <!-- nariz pequeno e estilizado -->
+          <path d="M118 137 Q128 151 138 153" stroke="#e09c70" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".7" />
+          <circle cx="137" cy="152" r="2.6" fill="#fff" opacity=".6" />
+          <!-- bochechas -->
+          <ellipse cx="71" cy="143" rx="12" ry="7" fill="url(#gBlush)" class="lipe-blush" />
+          <ellipse cx="169" cy="143" rx="12" ry="7" fill="url(#gBlush)" class="lipe-blush" />
+
+          <!-- EXPRESSÃO: alegria (sorriso aberto) -->
+          <g class="lipe-expr lipe-alegre">
+            <path d="M74 101 Q88 92 102 99" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M138 99 Q152 92 166 101" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M94 160 C104 178 136 178 146 160 C134 169 106 169 94 160 Z" fill="#7c2a20" />
+            <path d="M100 161 L140 161 C132 166 108 166 100 161 Z" fill="#fff" />
+            <ellipse cx="120" cy="172" rx="12" ry="6" fill="#ff8f86" />
+          </g>
+
+          <!-- EXPRESSÃO: comemoração (olhos felizes fechados, sorriso largo, brilhos) -->
+          <g class="lipe-expr lipe-vitoria">
+            <ellipse cx="90" cy="128" rx="19" ry="22" fill="#fff" />
+            <ellipse cx="150" cy="128" rx="19" ry="22" fill="#fff" />
+            <path d="M74 126 Q90 110 106 126" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M134 126 Q150 110 166 126" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M90 99 Q105 90 120 98 L120 92 Q105 84 88 92 Z" fill="#ffd83d" />
+            <path d="M120 98 Q135 90 150 99 L152 92 Q135 84 120 92 Z" fill="#ffd83d" />
+            <path d="M72 88 Q78 82 84 86" stroke="#ffd83d" stroke-width="4" fill="none" stroke-linecap="round" />
+            <path d="M168 88 Q162 82 156 86" stroke="#ffd83d" stroke-width="4" fill="none" stroke-linecap="round" />
+            <path d="M90 158 C104 184 136 184 150 158 C136 174 104 174 90 158 Z" fill="#7c2a20" />
+            <path d="M108 172 Q120 182 132 172 Q124 178 120 178 Q116 178 108 172 Z" fill="#ff8f86" />
+            <ellipse cx="71" cy="142" rx="13" ry="8" fill="url(#gBlush)" />
+            <ellipse cx="169" cy="142" rx="13" ry="8" fill="url(#gBlush)" />
+          </g>
+
+          <!-- EXPRESSÃO: curiosidade (cabeça inclinada, sobrancelhas altas, "o" pensativo) -->
+          <g class="lipe-expr lipe-curioso">
+            <path d="M73 95 Q88 86 103 93" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M139 90 Q154 84 167 94" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <ellipse cx="120" cy="166" rx="11" ry="10" fill="#7c2a20" />
+            <circle cx="115" cy="163" r="2.2" fill="#e8a290" />
+          </g>
+
+          <!-- EXPRESSÃO: atenção (sério, concentrado e amigável) -->
+          <g class="lipe-expr lipe-atencao">
+            <path d="M74 99 Q88 96 102 98" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M138 98 Q152 96 166 99" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M98 162 Q120 170 142 162 C130 170 110 170 98 162 Z" fill="#7c2a20" />
+          </g>
+
+          <!-- EXPRESSÃO: surpresa -->
+          <g class="lipe-expr lipe-surpresa">
+            <ellipse cx="90" cy="128" rx="21" ry="24" fill="#fff" />
+            <ellipse cx="150" cy="128" rx="21" ry="24" fill="#fff" />
+            <ellipse cx="90" cy="130" rx="7.5" ry="9" fill="url(#gIris)" />
+            <ellipse cx="150" cy="130" rx="7.5" ry="9" fill="url(#gIris)" />
+            <circle cx="86" cy="126" r="3" fill="#fff" />
+            <circle cx="146" cy="126" r="3" fill="#fff" />
+            <path d="M73 92 Q88 84 103 91" stroke="#53341f" stroke-width="7" fill="none" stroke-linecap="round" />
+            <path d="M137 91 Q152 84 167 92" stroke="#53341f" stroke-width="7" fill="none" stroke-linecap="round" />
+            <ellipse cx="120" cy="162" rx="13" ry="18" fill="#7c2a20" />
+            <ellipse cx="120" cy="168" rx="8" ry="10" fill="#8a3226" />
+          </g>
+
+          <!-- EXPRESSÃO: preocupação suave (nunca de terror) -->
+          <g class="lipe-expr lipe-preocupado">
+            <path d="M74 98 Q86 100 102 96" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M138 96 Q154 100 166 98" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M102 168 Q120 160 138 168" stroke="#7c2a20" stroke-width="6" fill="none" stroke-linecap="round" />
+            <ellipse cx="120" cy="183" rx="22" ry="8" fill="url(#gBlush)" opacity=".5" />
+          </g>
+
+          <!-- EXPRESSÃO: "quase!" (incentivo, sorriso torto e simpático) -->
+          <g class="lipe-expr lipe-quase">
+            <path d="M74 98 Q88 93 102 100" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <path d="M139 95 Q153 96 165 101" stroke="#53341f" stroke-width="6" fill="none" stroke-linecap="round" />
+            <ellipse cx="90" cy="128" rx="19" ry="22" fill="#fff" />
+            <ellipse cx="150" cy="128" rx="19" ry="22" fill="#fff" />
+            <path d="M141 128 Q150 122 159 126" stroke="#53341f" stroke-width="5" fill="none" stroke-linecap="round" />
+            <path d="M98 164 Q114 170 132 165" stroke="#7c2a20" stroke-width="6" fill="none" stroke-linecap="round" />
+            <ellipse cx="120" cy="170" rx="17" ry="9" fill="#ff8f86" opacity=".55" />
+          </g>
+        </g>
+        <!-- PISCAR: pálpebras cor-de-pele acima de todas as expressões -->
+        <g class="lipe-blink">
+          <ellipse cx="90" cy="128" rx="22" ry="25" fill="url(#gSkin)" />
+          <ellipse cx="150" cy="128" rx="22" ry="25" fill="url(#gSkin)" />
+        </g>
+        <!-- GESTOS: braço que aparece conforme data-gesture (acenar / apontar) -->
+        <g class="lipe-gest lipe-gest-wave">
+          <path d="M148 200 C180 194 202 170 210 140" stroke="url(#gHood)" stroke-width="15" fill="none" stroke-linecap="round" />
+          <g transform="translate(212,130) rotate(18)">
+            <circle r="12" fill="url(#gSkin)" />
+            <path d="M-2 -10 v-9 M4 -11 l7 -6 M2 -11 l-8 -5 M0 -9 l9 4 M0 -9 l-9 4" stroke="url(#gSkin)" stroke-width="6" fill="none" stroke-linecap="round" />
+          </g>
+        </g>
+        <g class="lipe-gest lipe-gest-point">
+          <path d="M150 200 C178 194 194 176 200 158" stroke="url(#gHood)" stroke-width="15" fill="none" stroke-linecap="round" />
+          <g transform="translate(204,150)">
+            <circle r="11" fill="url(#gSkin)" />
+            <path d="M-5 5 c-7 2 -8 9 -6 13" stroke="url(#gSkin)" stroke-width="7" fill="none" stroke-linecap="round" />
+            <rect x="-8" y="-26" width="8" height="28" rx="4" fill="url(#gSkin)" />
+            <path d="M3 6 c6 2 8 9 6 13" stroke="url(#gSkin)" stroke-width="7" fill="none" stroke-linecap="round" />
+          </g>
+        </g>
+        <g class="lipe-gest lipe-gest-point-down">
+          <g transform="translate(204,150) rotate(180)">
+            <circle r="11" fill="url(#gSkin)" />
+            <path d="M-5 5 c-7 2 -8 9 -6 13" stroke="url(#gSkin)" stroke-width="7" fill="none" stroke-linecap="round" />
+            <rect x="-8" y="-26" width="8" height="28" rx="4" fill="url(#gSkin)" />
+            <path d="M3 6 c6 2 8 9 6 13" stroke="url(#gSkin)" stroke-width="7" fill="none" stroke-linecap="round" />
+          </g>
+          <path d="M150 200 C176 202 188 214 192 232" stroke="url(#gHood)" stroke-width="15" fill="none" stroke-linecap="round" />
+        </g>
+      </svg>
+    </template>
+
+    <!-- Botão de som global -->
+    <button id="btn-sound" class="btn-sound" type="button" data-action="toggle-sound" aria-label="Ligar ou desligar o som">🔊</button>
+
+    <!-- ============================ TELA INICIAL ============================ -->
+    <section id="screen-home" class="screen active" aria-label="Tela inicial">
+      <div class="home-layout">
+        <div class="home-hero">
+          <img id="home-scene" class="home-scene" src="assets/scenes/cena-plataforma-home.svg"
+               alt="Família esperando o trem atrás da faixa amarela na plataforma da estação" />
+        </div>
+        <div class="home-panel">
+          <h1><span class="logo-train">🚂</span> MISSÃO FERROVIÁRIA SEGURA</h1>
+          <p class="home-subtitle">Descubra como viajar de trem com segurança e ajude sua família a fazer boas escolhas na estação!</p>
+
+          <div class="lipe-bubble home-bubble" id="home-bubble">
+            <span class="lipe-mount home-lipe" data-exp="alegre" role="img" aria-label="Lipe, o guia do jogo"></span>
+            <p id="home-bubble-p">"Olá! Eu sou o Lipe. Pronto para a missão? Vamos descobrir como viajar de trem com segurança!"</p>
+          </div>
+
+          <nav class="home-menu">
+            <button class="btn btn-primary" data-action="go-missions">▶ COMEÇAR MISSÃO</button>
+            <button class="btn btn-secondary" data-action="go-howto">📖 COMO JOGAR</button>
+            <button class="btn btn-secondary" data-action="go-progress">⭐ MEU PROGRESSO</button>
+            <button class="btn btn-sound-toggle" data-action="toggle-sound">🔊 SOM</button>
+          </nav>
+          <p class="home-foot">8 missões • 40 perguntas • Aprenda e se divirta em segurança</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ MISSÕES ============================ -->
+    <section id="screen-missions" class="screen" aria-label="Escolha de missões">
+      <header class="screen-header">
+        <button class="btn btn-ghost" data-action="go-home">← Menu</button>
+        <h2>Escolha uma missão</h2>
+        <span id="missions-stars" class="header-stars"></span>
+      </header>
+      <p class="screen-intro">Cadastradas automaticamente: cada missão ativa aparece aqui. Qual você quer visitar?</p>
+      <div id="missions-grid" class="missions-grid"><!-- missões geradas por JavaScript --></div>
+    </section>
+
+    <!-- ============================ COMO JOGAR ============================ -->
+    <section id="screen-howto" class="screen" aria-label="Como jogar">
+      <header class="screen-header">
+        <button class="btn btn-ghost" data-action="go-home">← Menu</button>
+        <h2>📖 Como Jogar</h2>
+      </header>
+      <div class="howto-grid">
+        <div class="card">
+          <span class="card-emoji">🎮</span>
+          <h3>É simples!</h3>
+          <p>Escolha uma missão e responda 5 perguntas. Para cada pergunta há 4 alternativas e só uma é a mais segura.</p>
+        </div>
+        <div class="card">
+          <span class="card-emoji">🔀</span>
+          <h3>Respostas embaralhadas</h3>
+          <p>As alternativas mudam de posição a cada vez que você joga, então vale sempre pensar com calma.</p>
+        </div>
+        <div class="card">
+          <span class="card-emoji">🎓</span>
+          <h3>Aprenda com o feedback</h3>
+          <p>Depois de cada resposta, o Lipe explica por que aquela escolha é segura (ou por que a outra também é importante).</p>
+        </div>
+        <div class="card">
+          <span class="card-emoji">⭐</span>
+          <h3>Ganhe estrelas</h3>
+          <p>5 acertos = ⭐⭐⭐ &nbsp;•&nbsp; 4 acertos = ⭐⭐ &nbsp;•&nbsp; 3 acertos = ⭐. Faça de novo para melhorar sua pontuação!</p>
+        </div>
+        <div class="card">
+          <span class="card-emoji">🚸</span>
+          <h3>Regra de ouro</h3>
+          <p>Nas estações e passagens de nível, ninguém fica sobre os trilhos: todos esperam atrás da faixa amarela e das barreiras.</p>
+        </div>
+        <div class="card">
+          <span class="card-emoji">💾</span>
+          <h3>Seu progresso</h3>
+          <p>Tudo fica salvo automaticamente neste dispositivo: estrelas, pontuações e conquistas em "Meu Progresso".</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ QUIZ ============================ -->
+    <section id="screen-quiz" class="screen" aria-label="Missão em andamento">
+      <header class="quiz-topbar">
+        <button class="btn btn-ghost" data-action="exit-quiz" aria-label="Sair da missão">✕</button>
+        <span id="quiz-mission" class="quiz-mission"></span>
+        <span id="quiz-counter" class="quiz-counter"></span>
+        <button class="btn btn-ghost" data-action="toggle-sound" aria-label="Som">🔊</button>
+      </header>
+      <div class="quiz-progress"><div id="quiz-bar" class="quiz-bar"></div></div>
+
+      <!-- Painel de introdução com o Lipe -->
+      <div class="quiz-intro hidden" id="quiz-intro">
+        <div class="intro-card">
+          <div class="intro-scene-wrap">
+            <img id="intro-scene" class="intro-scene hidden" alt="">
+            <span class="lipe-mount big intro-lipe" data-exp="alegre" role="img" aria-label="Lipe, o guia do jogo"></span>
+          </div>
+          <h3 id="intro-title"></h3>
+          <div class="lipe-bubble intro-bubble" id="intro-bubble">
+            <p id="intro-text"></p>
+          </div>
+          <button class="btn btn-primary" data-action="quiz-start">Começar!</button>
+        </div>
+      </div>
+
+      <!-- Pergunta -->
+      <div id="quiz-play" class="quiz-play">
+        <div class="lipe-bubble quiz-bubble">
+          <span class="lipe-mount lipe-tip-face" data-exp="atencao" role="img" aria-label="Lipe dá uma dica de atenção"></span>
+          <p id="lipe-tip">Leia com atenção e escolha a alternativa mais segura!</p>
+        </div>
+
+        <div class="quiz-card card">
+          <div class="q-meta">
+            <span id="q-badge" class="q-badge">PERGUNTA</span>
+          </div>
+          <div id="q-image-wrap" class="q-image-wrap hidden">
+            <img id="q-image" alt="Imagem que ilustra a pergunta" src="" />
+          </div>
+          <h3 id="q-text" class="q-text"></h3>
+          <div id="q-options" class="q-options" role="list"></div>
+        </div>
+
+        <!-- Feedback -->
+        <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============================ RESULTADO DA MISSÃO ============================ -->
+    <section id="screen-result" class="screen" aria-label="Resultado da missão">
+      <div class="center-card">
+        <h2 id="result-title"></h2>
+        <span class="lipe-mount result-lipe" data-exp="vitoria" role="img" aria-label="Lipe comemorando a missão concluída"></span>
+        <div id="result-stars" class="result-stars"></div>
+        <p id="result-message" class="result-message"></p>
+        <p id="result-lipe-line" class="lipe-fala"></p>
+        <div class="result-stats">
+          <div class="stat"><span id="stat-score"></span><small>pontos</small></div>
+          <div class="stat"><span id="stat-correct"></span><small>acertos</small></div>
+          <div class="stat"><span id="stat-pct"></span><small>aproveitamento</small></div>
+          <div class="stat"><span id="stat-best"></span><small>melhor</small></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btn-next-mission" data-action="next-mission" hidden>Próxima missão ▶</button>
+          <button class="btn btn-secondary" data-action="retry-mission">🔁 Repetir missão</button>
+          <button class="btn btn-secondary" data-action="go-missions">Missões</button>
+          <button class="btn btn-ghost" data-action="go-home">Menu</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FINAL DO JOGO ============================ -->
+    <section id="screen-final" class="screen" aria-label="Missão Ferroviária Segura concluída">
+      <div class="center-card final-card">
+        <div class="trophy">🏆</div>
+        <h2>MISSÃO FERROVIÁRIA SEGURA CONCLUÍDA!</h2>
+        <span class="lipe-mount final-lipe" data-exp="vitoria" role="img" aria-label="Lipe comemorando todas as missões"></span>
+        <div id="final-stars" class="result-stars"></div>
+        <p class="result-message">Parabéns! Você completou sua missão e aprendeu várias formas de viajar de trem com segurança.</p>
+        <p class="final-motto">🚂 <strong>Segurança começa com boas escolhas!</strong></p>
+        <p id="final-lipe-line" class="lipe-fala"></p>
+        <div class="result-stats">
+          <div class="stat"><span id="final-score"></span><small>pontuação total</small></div>
+          <div class="stat"><span id="final-stars-count"></span><small>estrelas</small></div>
+          <div class="stat"><span id="final-hits"></span><small>acertos</small></div>
+          <div class="stat"><span id="final-pct"></span><small>aproveitamento</small></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-primary" data-action="go-progress">⭐ Meu Progresso</button>
+          <button class="btn btn-secondary" data-action="go-missions">Missões</button>
+          <button class="btn btn-ghost" data-action="go-home">Menu</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ MEU PROGRESSO ============================ -->
+    <section id="screen-progress" class="screen" aria-label="Meu progresso">
+      <header class="screen-header">
+        <button class="btn btn-ghost" data-action="go-home">← Menu</button>
+        <h2>⭐ Meu Progresso</h2>
+      </header>
+
+      <div class="progress-overall card">
+        <div class="progress-label"><span>Progresso geral</span><span id="progress-overall-text"></span></div>
+        <div class="progress-track"><div id="progress-overall-bar" class="progress-fill"></div></div>
+      </div>
+
+      <div class="result-stats progress-stats">
+        <div class="stat"><span id="p-completed"></span><small>missões concluídas</small></div>
+        <div class="stat"><span id="p-stars"></span><small>estrelas</small></div>
+        <div class="stat"><span id="p-answered"></span><small>perguntas respondidas</small></div>
+        <div class="stat"><span id="p-hits"></span><small>acertos</small></div>
+        <div class="stat"><span id="p-best"></span><small>melhor pontuação</small></div>
+      </div>
+
+      <h3 class="progress-subtitle">Missões</h3>
+      <div id="progress-missions" class="progress-missions"><!-- lista por JavaScript --></div>
+
+      <div class="danger-zone">
+        <button class="btn btn-danger" data-action="reset-progress">🗑️ REINICIAR PROGRESSO</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Modal de confirmação -->
+  <div id="modal-area" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card card">
+      <h3 id="modal-title">Confirmar</h3>
+      <p id="modal-text"></p>
+      <div class="btn-row">
+        <button class="btn btn-secondary" id="modal-cancel">Cancelar</button>
+        <button class="btn btn-danger" id="modal-ok">Sim, continuar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Camada de confete -->
+  <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+
+  <!-- Resultado dos autotestes (visível apenas com ?autoteste=1) -->
+  <pre id="test-report" class="test-report hidden" aria-hidden="true"></pre>
+
+  <script src="js/storage.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/missions.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/lipe-lines.js"></script>
+  <script src="js/lipe.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Estação ferroviária moderna: Lipe e a família esperam atrás da faixa amarela enquanto um trem passa ao fundo, em local seguro.">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe0f7"/>
+      <stop offset="0.65" stop-color="#e4f2fd"/>
+      <stop offset="1" stop-color="#fdf6e7"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="0.78" cy="0.22" r="0.45">
+      <stop offset="0" stop-color="#fff4d0" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#fff4d0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="floorG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6ecf3"/>
+      <stop offset="1" stop-color="#cdd7e2"/>
+    </linearGradient>
+    <linearGradient id="yellowG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffdd70"/>
+      <stop offset="1" stop-color="#efb72c"/>
+    </linearGradient>
+    <linearGradient id="trainG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dce8f2"/>
+    </linearGradient>
+    <linearGradient id="roofG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fb6d9"/>
+      <stop offset="1" stop-color="#6d97c2"/>
+    </linearGradient>
+    <linearGradient id="jacketL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#63a8ec"/>
+      <stop offset="1" stop-color="#3478c2"/>
+    </linearGradient>
+    <linearGradient id="skinL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbd9b7"/>
+      <stop offset="1" stop-color="#f0bd94"/>
+    </linearGradient>
+    <linearGradient id="skinD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8d5a38"/>
+      <stop offset="1" stop-color="#744526"/>
+    </linearGradient>
+    <linearGradient id="skinM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0c69c"/>
+      <stop offset="1" stop-color="#e3b183"/>
+    </linearGradient>
+    <filter id="blurS" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <pattern id="tactile" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="4.4" fill="#ffe9a3" opacity="0.9"/>
+      <circle cx="21" cy="21" r="4.4" fill="#ffe9a3" opacity="0.9"/>
+    </pattern>
+  </defs>
+
+  <!-- ================= CÉU E FUNDO ================= -->
+  <rect width="1200" height="675" fill="url(#sky)"/>
+  <rect width="1200" height="675" fill="url(#sunGlow)"/>
+  <g fill="#ffffff" opacity="0.85">
+    <ellipse cx="230" cy="90" rx="72" ry="26"/>
+    <ellipse cx="285" cy="78" rx="52" ry="24"/>
+    <ellipse cx="960" cy="60" rx="64" ry="22"/>
+    <ellipse cx="1010" cy="70" rx="44" ry="18"/>
+  </g>
+  <g opacity="0.35" fill="#9db9d2">
+    <rect x="60" y="230" width="70" height="130" rx="6"/>
+    <rect x="150" y="265" width="52" height="95" rx="6"/>
+    <rect x="1020" y="245" width="66" height="115" rx="6"/>
+    <rect x="1100" y="280" width="46" height="80" rx="6"/>
+    <rect x="880" y="270" width="48" height="90" rx="6"/>
+  </g>
+
+  <!-- ================= COBERTURA (TOPO) ================= -->
+  <g>
+    <rect x="-10" y="-10" width="1220" height="78" rx="14" fill="url(#roofG)"/>
+    <rect x="-10" y="58" width="1220" height="16" fill="#5c86b1"/>
+    <g fill="#ffffff" opacity="0.16">
+      <rect x="40" y="6" width="180" height="40" rx="8"/>
+      <rect x="300" y="6" width="180" height="40" rx="8"/>
+      <rect x="560" y="6" width="180" height="40" rx="8"/>
+      <rect x="820" y="6" width="180" height="40" rx="8"/>
+      <rect x="1080" y="6" width="120" height="40" rx="8"/>
+    </g>
+    <!-- nome da estação -->
+    <rect x="470" y="14" width="260" height="38" rx="19" fill="#ffffff" opacity="0.95"/>
+    <text x="600" y="40" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#2f6cb5">ESTAÇÃO AURORA</text>
+    <!-- colunas laterais -->
+    <rect x="46" y="60" width="26" height="500" rx="10" fill="#7ba2c9"/>
+    <rect x="1128" y="60" width="26" height="500" rx="10" fill="#7ba2c9"/>
+    <rect x="52" y="60" width="8" height="500" rx="4" fill="#9fc0de" opacity="0.8"/>
+    <rect x="1134" y="60" width="8" height="500" rx="4" fill="#9fc0de" opacity="0.8"/>
+  </g>
+
+  <!-- ============ PLACAS PENDURADAS / RELÓGIO / PAINÉIS ============ -->
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <line x1="240" y1="74" x2="240" y2="104" stroke="#54789e" stroke-width="5"/>
+    <line x1="390" y1="74" x2="390" y2="104" stroke="#54789e" stroke-width="5"/>
+    <rect x="200" y="104" width="230" height="52" rx="12" fill="#2f6cb5"/>
+    <text x="315" y="137" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Plataforma 2</text>
+
+    <line x1="806" y1="74" x2="806" y2="100" stroke="#54789e" stroke-width="5"/>
+    <line x1="914" y1="74" x2="914" y2="100" stroke="#54789e" stroke-width="5"/>
+    <rect x="776" y="100" width="168" height="46" rx="12" fill="#43b97f"/>
+    <text x="860" y="131" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">Saída  →</text>
+
+    <!-- relógio -->
+    <line x1="600" y1="74" x2="600" y2="96" stroke="#54789e" stroke-width="5"/>
+    <circle cx="600" cy="132" r="34" fill="#ffffff" stroke="#54789e" stroke-width="7"/>
+    <line x1="600" y1="132" x2="600" y2="110" stroke="#243b53" stroke-width="5" stroke-linecap="round"/>
+    <line x1="600" y1="132" x2="618" y2="140" stroke="#243b53" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="600" cy="132" r="4.5" fill="#e8756a"/>
+
+    <!-- painel de avisos -->
+    <line x1="990" y1="74" x2="990" y2="92" stroke="#54789e" stroke-width="5"/>
+    <rect x="905" y="92" width="170" height="58" rx="10" fill="#243b53"/>
+    <text x="990" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#8ee6a8">PRÓXIMO TREM</text>
+    <text x="990" y="139" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Linha Verde · 5 min</text>
+  </g>
+
+  <!-- ================= TREM AO FUNDO ================= -->
+  <g>
+    <!-- sombra e trilhos -->
+    <ellipse cx="600" cy="366" rx="560" ry="16" fill="#5f748a" opacity="0.35" filter="url(#blurS)"/>
+    <rect x="0" y="344" width="1200" height="24" fill="#aeb9c5"/>
+    <g stroke="#8b98a6" stroke-width="5">
+      <line x1="0" y1="350" x2="1200" y2="350"/>
+      <line x1="0" y1="362" x2="1200" y2="362"/>
+    </g>
+    <g fill="#96a2af">
+      <rect x="30" y="346" width="16" height="20" rx="3"/><rect x="110" y="346" width="16" height="20" rx="3"/>
+      <rect x="190" y="346" width="16" height="20" rx="3"/><rect x="270" y="346" width="16" height="20" rx="3"/>
+      <rect x="350" y="346" width="16" height="20" rx="3"/><rect x="430" y="346" width="16" height="20" rx="3"/>
+      <rect x="510" y="346" width="16" height="20" rx="3"/><rect x="590" y="346" width="16" height="20" rx="3"/>
+      <rect x="670" y="346" width="16" height="20" rx="3"/><rect x="750" y="346" width="16" height="20" rx="3"/>
+      <rect x="830" y="346" width="16" height="20" rx="3"/><rect x="910" y="346" width="16" height="20" rx="3"/>
+      <rect x="990" y="346" width="16" height="20" rx="3"/><rect x="1070" y="346" width="16" height="20" rx="3"/>
+      <rect x="1150" y="346" width="16" height="20" rx="3"/>
+    </g>
+
+    <!-- composição -->
+    <path d="M 40 344 L 40 236 Q 40 200 96 194 L 1020 178 Q 1120 176 1140 210 L 1160 344 Z" fill="url(#trainG)"/>
+    <path d="M 40 344 L 40 268 L 1160 250 L 1160 344 Z" fill="#4a90d9"/>
+    <path d="M 40 344 L 40 330 L 1160 322 L 1160 344 Z" fill="#2f6cb5"/>
+    <!-- nariz arredondado -->
+    <path d="M 40 344 L 40 236 Q 40 200 96 194 Q 60 216 58 260 L 58 344 Z" fill="#eef5fb"/>
+    <!-- janelas -->
+    <g fill="#bfe0f7" stroke="#9ec7e8" stroke-width="4">
+      <rect x="96" y="206" width="96" height="52" rx="14"/>
+      <rect x="220" y="202" width="96" height="52" rx="14"/>
+      <rect x="344" y="198" width="96" height="52" rx="14"/>
+      <rect x="468" y="195" width="96" height="52" rx="14"/>
+      <rect x="592" y="192" width="96" height="52" rx="14"/>
+      <rect x="716" y="190" width="96" height="52" rx="14"/>
+      <rect x="840" y="187" width="96" height="52" rx="14"/>
+      <rect x="964" y="185" width="96" height="52" rx="14"/>
+      <rect x="1074" y="183" width="66" height="52" rx="14"/>
+    </g>
+    <!-- reflexos nas janelas -->
+    <g fill="#ffffff" opacity="0.55">
+      <rect x="104" y="212" width="30" height="16" rx="8"/>
+      <rect x="228" y="208" width="30" height="16" rx="8"/>
+      <rect x="352" y="204" width="30" height="16" rx="8"/>
+      <rect x="476" y="201" width="30" height="16" rx="8"/>
+      <rect x="600" y="198" width="30" height="16" rx="8"/>
+      <rect x="724" y="196" width="30" height="16" rx="8"/>
+      <rect x="848" y="193" width="30" height="16" rx="8"/>
+      <rect x="972" y="191" width="30" height="16" rx="8"/>
+    </g>
+    <!-- portas -->
+    <g fill="#dfeaf4" stroke="#9ec7e8" stroke-width="4">
+      <rect x="196" y="200" width="56" height="140" rx="10"/>
+      <rect x="440" y="194" width="56" height="144" rx="10"/>
+      <rect x="684" y="189" width="56" height="147" rx="10"/>
+      <rect x="928" y="184" width="56" height="150" rx="10"/>
+    </g>
+    <g stroke="#7aa8cf" stroke-width="3">
+      <line x1="224" y1="204" x2="224" y2="336"/>
+      <line x1="468" y1="198" x2="468" y2="334"/>
+      <line x1="712" y1="193" x2="712" y2="332"/>
+      <line x1="956" y1="188" x2="956" y2="330"/>
+    </g>
+    <!-- faróis suaves -->
+    <circle cx="52" cy="300" r="10" fill="#ffe9a3"/>
+    <circle cx="52" cy="300" r="17" fill="#ffe9a3" opacity="0.4" filter="url(#softGlow)"/>
+    <!-- faixa do trem -->
+    <rect x="40" y="272" width="1120" height="10" fill="#f5c542" opacity="0.9"/>
+  </g>
+
+  <!-- ================= PISO DA PLATAFORMA ================= -->
+  <rect x="0" y="366" width="1200" height="309" fill="url(#floorG)"/>
+  <!-- borda da plataforma -->
+  <rect x="0" y="366" width="1200" height="22" fill="#f7fafd"/>
+  <rect x="0" y="366" width="1200" height="7" fill="#c3ced9"/>
+  <g stroke="#dbe4ec" stroke-width="3">
+    <line x1="0" y1="470" x2="1200" y2="470"/>
+    <line x1="0" y1="560" x2="1200" y2="560"/>
+    <line x1="0" y1="655" x2="1200" y2="655"/>
+  </g>
+  <g stroke="#dde5ed" stroke-width="3" opacity="0.7">
+    <line x1="240" y1="388" x2="180" y2="675"/>
+    <line x1="600" y1="388" x2="600" y2="675"/>
+    <line x1="960" y1="388" x2="1020" y2="675"/>
+  </g>
+
+  <!-- ============ FAIXA AMARELA (destaque obrigatório) ============ -->
+  <g>
+    <rect x="0" y="404" width="1200" height="48" fill="url(#yellowG)"/>
+    <rect x="0" y="404" width="1200" height="48" fill="url(#tactile)"/>
+    <rect x="0" y="404" width="1200" height="6" fill="#fff0bd" opacity="0.9"/>
+    <rect x="0" y="446" width="1200" height="6" fill="#d99f1f" opacity="0.8"/>
+    <text x="1180" y="486" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#8a6a12" opacity="0.85">mantenha-se atrás da faixa amarela</text>
+  </g>
+
+  <!-- ================= BANCO E PASSAGEIROS AO FUNDO ================= -->
+  <!-- banco -->
+  <g>
+    <ellipse cx="215" cy="586" rx="120" ry="14" fill="#5f748a" opacity="0.18" filter="url(#blurS)"/>
+    <rect x="120" y="500" width="190" height="16" rx="8" fill="#c79a63"/>
+    <rect x="120" y="474" width="190" height="14" rx="7" fill="#d8ab74"/>
+    <rect x="132" y="516" width="14" height="54" rx="6" fill="#8d99a8"/>
+    <rect x="284" y="516" width="14" height="54" rx="6" fill="#8d99a8"/>
+    <rect x="120" y="444" width="16" height="58" rx="8" fill="#b98a55"/>
+    <rect x="294" y="444" width="16" height="58" rx="8" fill="#b98a55"/>
+  </g>
+  <!-- pessoa sentada no banco (atrás da faixa) -->
+  <g transform="translate(215,470) scale(0.72)">
+    <ellipse cx="0" cy="146" rx="46" ry="10" fill="#5f748a" opacity="0.2" filter="url(#blurS)"/>
+    <path d="M -18 146 L -60 146 L -60 118 L -18 118 Z" fill="#4e6e8e"/>
+    <path d="M -18 118 L -18 96 L 20 96 L 20 118 Z" fill="#4e6e8e"/>
+    <rect x="-24" y="34" width="50" height="66" rx="20" fill="#e98f7d"/>
+    <path d="M -24 78 L -52 108" stroke="#e98f7d" stroke-width="17" stroke-linecap="round"/>
+    <circle cx="0" cy="6" r="26" fill="url(#skinM)"/>
+    <path d="M -26 4 C -28 -22 -12 -30 0 -30 C 14 -30 28 -22 26 4 C 20 -12 10 -16 0 -16 C -12 -16 -20 -10 -26 4 Z" fill="#3a2a20"/>
+    <circle cx="-9" cy="6" r="3.6" fill="#4a3728"/>
+    <circle cx="9" cy="6" r="3.6" fill="#4a3728"/>
+    <path d="M -7 17 Q 0 23 7 17" stroke="#8c4a3f" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- passageiro ao fundo, caminhando na área segura -->
+  <g transform="translate(640,462) scale(0.78)">
+    <ellipse cx="0" cy="150" rx="44" ry="10" fill="#5f748a" opacity="0.2" filter="url(#blurS)"/>
+    <path d="M -12 148 L -16 96 L 16 96 L 12 148" stroke="#3d4c5e" stroke-width="19" fill="none" stroke-linecap="round"/>
+    <rect x="-26" y="34" width="54" height="70" rx="22" fill="#4fa3a5"/>
+    <path d="M -24 50 L -44 92" stroke="#4fa3a5" stroke-width="17" stroke-linecap="round"/>
+    <path d="M 26 50 L 44 70" stroke="#4fa3a5" stroke-width="17" stroke-linecap="round"/>
+    <circle cx="0" cy="4" r="27" fill="url(#skinD)"/>
+    <path d="M -27 2 C -29 -24 -12 -32 0 -32 C 14 -32 29 -24 27 2 C 21 -14 10 -18 0 -18 C -12 -18 -21 -12 -27 2 Z" fill="#241a14"/>
+    <circle cx="-9" cy="5" r="3.8" fill="#2e2119"/>
+    <circle cx="9" cy="5" r="3.8" fill="#2e2119"/>
+    <path d="M -7 17 Q 0 24 7 17" stroke="#4b2f24" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+    <!-- mala -->
+    <rect x="40" y="92" width="34" height="46" rx="9" fill="#7ba2c9"/>
+    <path d="M 50 92 v-10 a7 7 0 0 1 14 0 v10" fill="none" stroke="#54789e" stroke-width="5"/>
+  </g>
+
+  <!-- ================= LIPE (guia) — atrás da faixa amarela ================= -->
+  <g transform="translate(388,478)">
+    <ellipse cx="0" cy="176" rx="52" ry="11" fill="#5f748a" opacity="0.28" filter="url(#blurS)"/>
+    <!-- pernas -->
+    <path d="M -15 104 L -18 158" stroke="#35506e" stroke-width="22" stroke-linecap="round"/>
+    <path d="M 15 104 L 18 158" stroke="#35506e" stroke-width="22" stroke-linecap="round"/>
+    <!-- sapatos -->
+    <ellipse cx="-22" cy="166" rx="17" ry="9" fill="#ffffff" stroke="#d3dfeb" stroke-width="3"/>
+    <ellipse cx="22" cy="166" rx="17" ry="9" fill="#ffffff" stroke="#d3dfeb" stroke-width="3"/>
+    <!-- braço esquerdo relaxado -->
+    <path d="M -30 52 Q -46 74 -42 104" stroke="url(#jacketL)" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <circle cx="-42" cy="108" r="9" fill="url(#skinL)"/>
+    <!-- braço direito acenando -->
+    <path d="M 30 52 Q 48 34 54 12" stroke="url(#jacketL)" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <circle cx="56" cy="8" r="10" fill="url(#skinL)"/>
+    <!-- corpo: jaqueta -->
+    <path d="M -35 106 L -35 54 Q -35 36 -18 31 L 0 42 L 18 31 Q 35 36 35 54 L 35 106 Z" fill="url(#jacketL)"/>
+    <!-- camiseta branca -->
+    <path d="M -13 33 L 0 44 L 13 33 L 8 62 L -8 62 Z" fill="#ffffff"/>
+    <path d="M -35 66 L 35 66" stroke="#2b64a8" stroke-width="3" opacity="0.5"/>
+    <!-- pescoço -->
+    <rect x="-9" y="20" width="18" height="18" rx="7" fill="#eeba90"/>
+    <!-- rosto -->
+    <g>
+      <circle cx="-27" cy="3" r="6.5" fill="#f0bd94"/>
+      <circle cx="27" cy="3" r="6.5" fill="#f0bd94"/>
+      <ellipse cx="0" cy="0" rx="28" ry="30" fill="url(#skinL)"/>
+      <ellipse cx="-15" cy="10" rx="7" ry="4.5" fill="#f4a08d" opacity="0.5"/>
+      <ellipse cx="15" cy="10" rx="7" ry="4.5" fill="#f4a08d" opacity="0.5"/>
+      <ellipse cx="-10" cy="-1" rx="7.6" ry="8.6" fill="#ffffff"/>
+      <ellipse cx="10" cy="-1" rx="7.6" ry="8.6" fill="#ffffff"/>
+      <circle cx="-9.4" cy="0" r="4.7" fill="#4a3728"/>
+      <circle cx="10.6" cy="0" r="4.7" fill="#4a3728"/>
+      <circle cx="-11" cy="-2" r="1.8" fill="#ffffff"/>
+      <circle cx="9" cy="-2" r="1.8" fill="#ffffff"/>
+      <path d="M -17 -13 Q -10 -17 -3.5 -14" stroke="#4b3626" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+      <path d="M 3.5 -14 Q 10 -17 17 -13" stroke="#4b3626" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+      <path d="M 0 4 Q 3.4 8.5 0 10.5" stroke="#e0a87e" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M -10 16 Q 0 27 10 16 Q 0 20.5 -10 16 Z" fill="#7d3f3a"/>
+      <path d="M -8 17 Q 0 21 8 17 Q 0 19 -8 17 Z" fill="#ffffff"/>
+      <!-- cabelo moderno -->
+      <path d="M -29 -5 C -32 -34 -12 -43 4 -39 C 21 -43 33 -30 29 -7 C 25 -20 15 -24 3 -22 C -9 -20 -19 -15 -25 -3 Z" fill="#4b3626"/>
+      <path d="M -20 -26 C -10 -34 6 -36 18 -30" stroke="#5d4634" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- ================= FAMÍLIA (atrás da faixa amarela) ================= -->
+  <!-- pai -->
+  <g transform="translate(770,470)">
+    <ellipse cx="0" cy="184" rx="54" ry="11" fill="#5f748a" opacity="0.28" filter="url(#blurS)"/>
+    <path d="M -16 108 L -19 166" stroke="#3d4c5e" stroke-width="23" stroke-linecap="round"/>
+    <path d="M 16 108 L 19 166" stroke="#3d4c5e" stroke-width="23" stroke-linecap="round"/>
+    <ellipse cx="-23" cy="174" rx="18" ry="9" fill="#37414d"/>
+    <ellipse cx="23" cy="174" rx="18" ry="9" fill="#37414d"/>
+    <path d="M -32 56 Q -48 82 -44 112" stroke="#4fa3a5" stroke-width="19" stroke-linecap="round" fill="none"/>
+    <circle cx="-44" cy="116" r="9.5" fill="url(#skinD)"/>
+    <path d="M 32 56 Q 46 84 42 112" stroke="#4fa3a5" stroke-width="19" stroke-linecap="round" fill="none"/>
+    <circle cx="42" cy="116" r="9.5" fill="url(#skinD)"/>
+    <path d="M -36 110 L -36 56 Q -36 37 -19 32 L 0 44 L 19 32 Q 36 37 36 56 L 36 110 Z" fill="#4fa3a5"/>
+    <path d="M -11 34 L 0 45 L 11 34 L 7 58 L -7 58 Z" fill="#e8f4f4"/>
+    <rect x="-9" y="20" width="18" height="18" rx="7" fill="#6d4226"/>
+    <g>
+      <circle cx="-26" cy="3" r="6.5" fill="#744526"/>
+      <circle cx="26" cy="3" r="6.5" fill="#744526"/>
+      <ellipse cx="0" cy="0" rx="27.5" ry="29.5" fill="url(#skinD)"/>
+      <ellipse cx="-14" cy="10" rx="7" ry="4.5" fill="#5d3520" opacity="0.5"/>
+      <ellipse cx="14" cy="10" rx="7" ry="4.5" fill="#5d3520" opacity="0.5"/>
+      <ellipse cx="-9.5" cy="-1" rx="7.2" ry="8.2" fill="#ffffff"/>
+      <ellipse cx="9.5" cy="-1" rx="7.2" ry="8.2" fill="#ffffff"/>
+      <circle cx="-9" cy="0" r="4.5" fill="#2e2119"/>
+      <circle cx="10" cy="0" r="4.5" fill="#2e2119"/>
+      <circle cx="-10.6" cy="-2" r="1.7" fill="#ffffff"/>
+      <circle cx="8.4" cy="-2" r="1.7" fill="#ffffff"/>
+      <path d="M -16 -12 Q -10 -16 -4 -13" stroke="#241a14" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+      <path d="M 4 -13 Q 10 -16 16 -12" stroke="#241a14" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+      <path d="M 0 5 Q 3 9 0 10.5" stroke="#5d3520" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M -9 17 Q 0 26 9 17 Q 0 21 -9 17 Z" fill="#4b2f24"/>
+      <path d="M -7 18 Q 0 21.5 7 18 Q 0 20 -7 18 Z" fill="#ffffff"/>
+      <path d="M -27 -2 C -30 -30 -12 -38 0 -38 C 14 -38 30 -30 27 -2 C 22 -18 11 -22 0 -22 C -12 -22 -22 -18 -27 -2 Z" fill="#241a14"/>
+    </g>
+  </g>
+
+  <!-- mãe -->
+  <g transform="translate(886,476)">
+    <ellipse cx="0" cy="180" rx="52" ry="11" fill="#5f748a" opacity="0.28" filter="url(#blurS)"/>
+    <!-- cabelo traseiro -->
+    <path d="M -28 -6 C -40 30 -36 76 -30 96 L 30 96 C 36 76 40 30 28 -6 Z" fill="#2e2119"/>
+    <path d="M -15 106 L -18 162" stroke="#4e6e8e" stroke-width="21" stroke-linecap="round"/>
+    <path d="M 15 106 L 18 162" stroke="#4e6e8e" stroke-width="21" stroke-linecap="round"/>
+    <ellipse cx="-22" cy="170" rx="17" ry="9" fill="#ffffff" stroke="#d3dfeb" stroke-width="3"/>
+    <ellipse cx="22" cy="170" rx="17" ry="9" fill="#ffffff" stroke="#d3dfeb" stroke-width="3"/>
+    <path d="M -30 54 Q -44 80 -40 108" stroke="#e98f7d" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <circle cx="-40" cy="112" r="9" fill="url(#skinM)"/>
+    <path d="M 30 54 Q 44 78 42 104" stroke="#e98f7d" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <circle cx="43" cy="108" r="9" fill="url(#skinM)"/>
+    <path d="M -34 108 L -34 54 Q -34 36 -18 31 L 0 42 L 18 31 Q 34 36 34 54 L 34 108 Z" fill="#e98f7d"/>
+    <path d="M -34 96 L 34 96 L 34 108 L -34 108 Z" fill="#4e6e8e" opacity="0.0"/>
+    <rect x="-9" y="20" width="18" height="18" rx="7" fill="#d9a06f"/>
+    <g>
+      <circle cx="-26" cy="3" r="6.5" fill="#e3b183"/>
+      <circle cx="26" cy="3" r="6.5" fill="#e3b183"/>
+      <ellipse cx="0" cy="0" rx="27" ry="29" fill="url(#skinM)"/>
+      <ellipse cx="-14" cy="10" rx="7" ry="4.5" fill="#f4a08d" opacity="0.5"/>
+      <ellipse cx="14" cy="10" rx="7" ry="4.5" fill="#f4a08d" opacity="0.5"/>
+      <ellipse cx="-9.5" cy="-1" rx="7.2" ry="8.4" fill="#ffffff"/>
+      <ellipse cx="9.5" cy="-1" rx="7.2" ry="8.4" fill="#ffffff"/>
+      <circle cx="-9" cy="0" r="4.5" fill="#3a2a20"/>
+      <circle cx="10" cy="0" r="4.5" fill="#3a2a20"/>
+      <circle cx="-10.6" cy="-2" r="1.7" fill="#ffffff"/>
+      <circle cx="8.4" cy="-2" r="1.7" fill="#ffffff"/>
+      <path d="M -16 -12 Q -10 -16 -4 -13" stroke="#2e2119" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 4 -13 Q 10 -16 16 -12" stroke="#2e2119" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 0 5 Q 3 9 0 10.5" stroke="#cf9866" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M -9 16 Q 0 26 9 16 Q 0 20.5 -9 16 Z" fill="#a0574c"/>
+      <path d="M -7 17.5 Q 0 21 7 17.5 Q 0 19.5 -7 17.5 Z" fill="#ffffff"/>
+      <path d="M -27 -4 C -31 -32 -12 -41 0 -41 C 14 -41 31 -32 27 -4 C 22 -20 12 -24 0 -24 C -12 -24 -22 -18 -27 -4 Z" fill="#2e2119"/>
+      <!-- franja lateral -->
+      <path d="M -27 -4 C -26 -20 -18 -30 -6 -34 C -16 -34 -24 -26 -26 -12 Z" fill="#3a2a20"/>
+    </g>
+  </g>
+
+  <!-- criança -->
+  <g transform="translate(992,516)">
+    <ellipse cx="0" cy="144" rx="44" ry="10" fill="#5f748a" opacity="0.28" filter="url(#blurS)"/>
+    <!-- mochila -->
+    <rect x="-32" y="34" width="16" height="52" rx="8" fill="#4a90d9"/>
+    <path d="M -26 36 L -14 30" stroke="#4a90d9" stroke-width="7" stroke-linecap="round"/>
+    <path d="M -13 84 L -16 128" stroke="#46617f" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 13 84 L 16 128" stroke="#46617f" stroke-width="18" stroke-linecap="round"/>
+    <ellipse cx="-20" cy="135" rx="15" ry="8" fill="#ffffff" stroke="#4a90d9" stroke-width="3"/>
+    <ellipse cx="20" cy="135" rx="15" ry="8" fill="#ffffff" stroke="#4a90d9" stroke-width="3"/>
+    <path d="M -26 46 Q -38 68 -34 92" stroke="#f5c542" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <circle cx="-34" cy="95" r="8" fill="url(#skinL)"/>
+    <path d="M 26 46 Q 38 66 36 88" stroke="#f5c542" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <circle cx="37" cy="91" r="8" fill="url(#skinL)"/>
+    <path d="M -29 88 L -29 44 Q -29 28 -15 24 L 0 33 L 15 24 Q 29 28 29 44 L 29 88 Z" fill="#f5c542"/>
+    <path d="M -15 25 L 0 35 L 15 25 L 11 48 L -11 48 Z" fill="#fff8e2"/>
+    <rect x="-8" y="14" width="16" height="16" rx="7" fill="#eeba90"/>
+    <g>
+      <circle cx="-23" cy="2" r="6" fill="#f0bd94"/>
+      <circle cx="23" cy="2" r="6" fill="#f0bd94"/>
+      <ellipse cx="0" cy="0" rx="24.5" ry="26" fill="url(#skinL)"/>
+      <ellipse cx="-12" cy="9" rx="6" ry="4" fill="#f4a08d" opacity="0.55"/>
+      <ellipse cx="12" cy="9" rx="6" ry="4" fill="#f4a08d" opacity="0.55"/>
+      <ellipse cx="-8.5" cy="-1" rx="6.6" ry="7.6" fill="#ffffff"/>
+      <ellipse cx="8.5" cy="-1" rx="6.6" ry="7.6" fill="#ffffff"/>
+      <circle cx="-8" cy="0" r="4.2" fill="#4a3728"/>
+      <circle cx="9" cy="0" r="4.2" fill="#4a3728"/>
+      <circle cx="-9.5" cy="-1.8" r="1.6" fill="#ffffff"/>
+      <circle cx="7.5" cy="-1.8" r="1.6" fill="#ffffff"/>
+      <path d="M -14 -11 Q -9 -14.5 -4 -12" stroke="#3b2a1f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <path d="M 4 -12 Q 9 -14.5 14 -11" stroke="#3b2a1f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <path d="M 0 4 Q 2.6 7.5 0 9.5" stroke="#e0a87e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M -8 14 Q 0 23 8 14 Q 0 18 -8 14 Z" fill="#7d3f3a"/>
+      <path d="M -6.5 15 Q 0 18.5 6.5 15 Q 0 17 -6.5 15 Z" fill="#ffffff"/>
+      <path d="M -25 -3 C -28 -27 -11 -34 0 -34 C 13 -34 28 -27 25 -3 C 20 -17 11 -21 0 -21 C -11 -21 -20 -16 -25 -3 Z" fill="#3b2a1f"/>
+      <path d="M -25 -3 C -24 -14 -18 -22 -8 -26 C -16 -25 -22 -18 -24 -8 Z" fill="#4a3728"/>
+    </g>
+  </g>
+
+  <!-- luz suave de topo (tom cinematográfico) -->
+  <rect width="1200" height="675" fill="url(#sunGlow)" opacity="0.35"/>
+</svg>

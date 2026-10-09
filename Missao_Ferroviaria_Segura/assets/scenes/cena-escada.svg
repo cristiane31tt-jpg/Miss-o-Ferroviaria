@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Cena das escadas da estação: mãe e criança descem segurando o corrimão, sem correr">
+  <defs>
+    <linearGradient id="bgS" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dceefb"/>
+      <stop offset="1" stop-color="#eef4f9"/>
+    </linearGradient>
+    <linearGradient id="wallS" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8eef5"/>
+      <stop offset="1" stop-color="#d3dde8"/>
+    </linearGradient>
+    <linearGradient id="stairS" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3f7fb"/>
+      <stop offset="1" stop-color="#d7e0ea"/>
+    </linearGradient>
+    <filter id="shS" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgS)"/>
+  <!-- parede -->
+  <rect width="800" height="500" fill="url(#wallS)"/>
+  <rect width="800" height="70" fill="#7ba2c9"/>
+  <rect y="64" width="800" height="12" fill="#5c86b1"/>
+  <g stroke="#c4d2e0" stroke-width="3">
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="260" x2="800" y2="260"/>
+    <line x1="270" y1="76" x2="270" y2="500"/>
+    <line x1="540" y1="76" x2="540" y2="500"/>
+  </g>
+
+  <!-- placa superior -->
+  <line x1="330" y1="76" x2="330" y2="96" stroke="#54789e" stroke-width="4"/>
+  <line x1="560" y1="76" x2="560" y2="96" stroke="#54789e" stroke-width="4"/>
+  <rect x="248" y="96" width="344" height="46" rx="12" fill="#2f6cb5"/>
+  <text x="420" y="126" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">Escada  ·  Plataformas 1 e 2  ↑</text>
+
+  <!-- placa de segurança -->
+  <rect x="596" y="96" width="170" height="86" rx="12" fill="#ffffff" stroke="#43b97f" stroke-width="4"/>
+  <text x="681" y="126" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#2c8a5b">SEGURE O</text>
+  <text x="681" y="147" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#2c8a5b">CORRIMÃO</text>
+  <text x="681" y="170" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#55708b">e não corra</text>
+
+  <!-- ============ ESCADA ============ -->
+  <g>
+    <!-- corpo da escada -->
+    <path d="M 70 470 H 116 V 440 H 162 V 410 H 208 V 380 H 254 V 350 H 300 V 320 H 346 V 290 H 392 V 260 H 438 V 230 H 484 V 200 H 530 V 170 H 576 V 140 H 636 V 470 Z" fill="url(#stairS)"/>
+    <path d="M 70 470 H 116 V 440 H 162 V 410 H 208 V 380 H 254 V 350 H 300 V 320 H 346 V 290 H 392 V 260 H 438 V 230 H 484 V 200 H 530 V 170 H 576 V 140 H 636" fill="none" stroke="#a9bacb" stroke-width="5" stroke-linejoin="round"/>
+    <!-- marcações amarelas nos degraus -->
+    <g fill="#f5c542">
+      <rect x="70" y="466" width="46" height="7" rx="3"/>
+      <rect x="116" y="436" width="46" height="7" rx="3"/>
+      <rect x="162" y="406" width="46" height="7" rx="3"/>
+      <rect x="208" y="376" width="46" height="7" rx="3"/>
+      <rect x="254" y="346" width="46" height="7" rx="3"/>
+      <rect x="300" y="316" width="46" height="7" rx="3"/>
+      <rect x="346" y="286" width="46" height="7" rx="3"/>
+      <rect x="392" y="256" width="46" height="7" rx="3"/>
+      <rect x="438" y="226" width="46" height="7" rx="3"/>
+      <rect x="484" y="196" width="46" height="7" rx="3"/>
+      <rect x="530" y="166" width="46" height="7" rx="3"/>
+      <rect x="576" y="136" width="60" height="7" rx="3"/>
+    </g>
+    <!-- corrimão -->
+    <line x1="56" y1="428" x2="600" y2="98" stroke="#6f9a8c" stroke-width="10" stroke-linecap="round"/>
+    <line x1="56" y1="446" x2="600" y2="116" stroke="#8fb9ac" stroke-width="5" stroke-linecap="round"/>
+    <g stroke="#6f9a8c" stroke-width="6" stroke-linecap="round">
+      <line x1="120" y1="424" x2="120" y2="470"/>
+      <line x1="260" y1="338" x2="260" y2="384"/>
+      <line x1="400" y1="252" x2="400" y2="298"/>
+      <line x1="540" y1="166" x2="540" y2="212"/>
+    </g>
+    <!-- corrimão lateral -->
+    <line x1="70" y1="500" x2="616" y2="168" stroke="#a9bacb" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- ============ CRIANÇA DESCENDO SEGUINDO O CORRIMÃO ============ -->
+  <g transform="translate(186,296) scale(0.84)">
+    <ellipse cx="4" cy="140" rx="42" ry="9" fill="#5f748a" opacity="0.24" filter="url(#shS)"/>
+    <path d="M -13 86 L -16 128" stroke="#46617f" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 13 86 L 17 126" stroke="#46617f" stroke-width="18" stroke-linecap="round"/>
+    <ellipse cx="-19" cy="135" rx="15" ry="8" fill="#ffffff" stroke="#4a90d9" stroke-width="3"/>
+    <ellipse cx="22" cy="133" rx="15" ry="8" fill="#ffffff" stroke="#4a90d9" stroke-width="3"/>
+    <path d="M -26 46 Q -36 68 -32 92" stroke="#f5c542" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <circle cx="-32" cy="95" r="8" fill="#fbd9b7"/>
+    <!-- braço no corrimão -->
+    <path d="M 26 46 Q 44 34 50 30" stroke="#f5c542" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <circle cx="53" cy="30" r="8" fill="#fbd9b7"/>
+    <path d="M -29 88 L -29 44 Q -29 28 -15 24 L 0 33 L 15 24 Q 29 28 29 44 L 29 88 Z" fill="#f5c542"/>
+    <path d="M -15 25 L 0 35 L 15 25 L 11 48 L -11 48 Z" fill="#fff8e2"/>
+    <rect x="-8" y="14" width="16" height="16" rx="7" fill="#eeba90"/>
+    <g>
+      <ellipse cx="0" cy="0" rx="24.5" ry="26" fill="#fbd9b7"/>
+      <ellipse cx="-8.5" cy="-1" rx="6.6" ry="7.6" fill="#ffffff"/>
+      <ellipse cx="8.5" cy="-1" rx="6.6" ry="7.6" fill="#ffffff"/>
+      <circle cx="-8" cy="0" r="4.2" fill="#4a3728"/>
+      <circle cx="9" cy="0" r="4.2" fill="#4a3728"/>
+      <circle cx="-9.5" cy="-1.8" r="1.6" fill="#ffffff"/>
+      <circle cx="7.5" cy="-1.8" r="1.6" fill="#ffffff"/>
+      <path d="M -14 -11 Q -9 -14.5 -4 -12" stroke="#3b2a1f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <path d="M 4 -12 Q 9 -14.5 14 -11" stroke="#3b2a1f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <path d="M -8 14 Q 0 23 8 14 Q 0 18 -8 14 Z" fill="#7d3f3a"/>
+      <path d="M -6.5 15 Q 0 18.5 6.5 15 Q 0 17 -6.5 15 Z" fill="#ffffff"/>
+      <path d="M -25 -3 C -28 -27 -11 -34 0 -34 C 13 -34 28 -27 25 -3 C 20 -17 11 -21 0 -21 C -11 -21 -20 -16 -25 -3 Z" fill="#3b2a1f"/>
+    </g>
+  </g>
+
+  <!-- ============ MÃE SEGUINDO O CORRIMÃO ============ -->
+  <g transform="translate(277,197) scale(0.9)">
+    <ellipse cx="0" cy="176" rx="50" ry="11" fill="#5f748a" opacity="0.26" filter="url(#shS)"/>
+    <path d="M -28 -6 C -40 30 -36 76 -30 96 L 30 96 C 36 76 40 30 28 -6 Z" fill="#2e2119"/>
+    <path d="M -15 106 L -20 162" stroke="#4e6e8e" stroke-width="21" stroke-linecap="round"/>
+    <path d="M 15 106 L 20 160" stroke="#4e6e8e" stroke-width="21" stroke-linecap="round"/>
+    <ellipse cx="-25" cy="170" rx="17" ry="9" fill="#ffffff" stroke="#d3dfeb" stroke-width="3"/>
+    <ellipse cx="24" cy="168" rx="17" ry="9" fill="#ffffff" stroke="#d3dfeb" stroke-width="3"/>
+    <path d="M -30 54 Q -44 78 -42 106" stroke="#e98f7d" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <circle cx="-42" cy="110" r="9" fill="#f0c69c"/>
+    <!-- braço no corrimão -->
+    <path d="M 30 54 Q 52 60 62 68" stroke="#e98f7d" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <circle cx="65" cy="71" r="9" fill="#f0c69c"/>
+    <path d="M -34 108 L -34 54 Q -34 36 -18 31 L 0 42 L 18 31 Q 34 36 34 54 L 34 108 Z" fill="#e98f7d"/>
+    <rect x="-9" y="20" width="18" height="18" rx="7" fill="#d9a06f"/>
+    <g>
+      <ellipse cx="0" cy="0" rx="27" ry="29" fill="#f0c69c"/>
+      <ellipse cx="-9.5" cy="-1" rx="7.2" ry="8.4" fill="#ffffff"/>
+      <ellipse cx="9.5" cy="-1" rx="7.2" ry="8.4" fill="#ffffff"/>
+      <circle cx="-9" cy="0" r="4.5" fill="#3a2a20"/>
+      <circle cx="10" cy="0" r="4.5" fill="#3a2a20"/>
+      <circle cx="-10.6" cy="-2" r="1.7" fill="#ffffff"/>
+      <circle cx="8.4" cy="-2" r="1.7" fill="#ffffff"/>
+      <path d="M -16 -12 Q -10 -16 -4 -13" stroke="#2e2119" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 4 -13 Q 10 -16 16 -12" stroke="#2e2119" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M -9 16 Q 0 26 9 16 Q 0 20.5 -9 16 Z" fill="#a0574c"/>
+      <path d="M -7 17.5 Q 0 21 7 17.5 Q 0 19.5 -7 17.5 Z" fill="#ffffff"/>
+      <path d="M -27 -4 C -31 -32 -12 -41 0 -41 C 14 -41 31 -32 27 -4 C 22 -20 12 -24 0 -24 C -12 -24 -22 -18 -27 -4 Z" fill="#2e2119"/>
+    </g>
+  </g>
+
+  <!-- ============ PISO SUPERIOR (chegada da escada) ============ -->
+  <rect x="636" y="140" width="164" height="30" fill="#e4eaf1"/>
+  <rect x="636" y="140" width="164" height="6" fill="#f5c542"/>
+
+  <!-- piso inferior -->
+  <rect y="470" width="800" height="30" fill="#c4ced9"/>
+  <g stroke="#b3bfcc" stroke-width="3">
+    <line x1="0" y1="486" x2="800" y2="486"/>
+  </g>
+</svg>

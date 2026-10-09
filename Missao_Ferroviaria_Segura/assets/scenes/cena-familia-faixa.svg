@@ -1,0 +1,518 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" role="img" aria-label="Família com criança segurando a mão dos pais, sempre atrás da faixa amarela">
+  <title>A família atrás da faixa amarela</title>
+  <style>
+    @keyframes trainLF { 0% { transform: translateX(0); } 100% { transform: translateX(-800px); } }
+    @keyframes trainSlide { 0% { transform: translateX(0); } 100% { transform: translateX(-178px); } }
+    @keyframes headPulse { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
+    @keyframes lampPulse { 0%, 100% { opacity: .18; } 50% { opacity: .55; } }
+    @keyframes breathe { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(1.5px); } }
+    @keyframes shineSweep { 0%, 12% { transform: translateX(-80px); opacity: 0; } 30% { opacity: .85; } 62%, 100% { transform: translateX(760px); opacity: 0; } }
+    @keyframes smokeRise { 0% { transform: translate(0, 0) scale(1); opacity: .5; } 100% { transform: translate(-10px, -40px) scale(1.8); opacity: 0; } }
+    .slideLF { animation: trainLF 26s linear infinite; }
+    .slideLF2 { animation: trainLF 26s linear infinite; }
+    .slide { animation: trainSlide 46s linear infinite; }
+    .pulse { animation: headPulse 3.2s ease-in-out infinite; }
+    .lamp { animation: lampPulse 2.7s ease-in-out infinite; }
+    .breath { animation: breathe 3s ease-in-out infinite; }
+    .shine { animation: shineSweep 9s ease-in-out infinite; }
+    .smoke { animation: smokeRise 4.2s linear infinite; }
+    @media (prefers-reduced-motion: reduce) { .slideLF, .slideLF2, .slide, .pulse, .lamp, .breath, .shine, .smoke { animation: none !important; } }
+  
+    @keyframes blinkEye { 0%, 91%, 100% { opacity: 0; } 92%, 96% { opacity: 1; } }
+    .blink-eye { opacity: 0; animation: blinkEye 5.2s infinite; }
+    @media (prefers-reduced-motion: reduce) { .blink-eye { animation: none !important; opacity: 0 !important; } }
+    @keyframes lensDrift { 0% { transform: scale(1); } 100% { transform: scale(1.035); } }
+    .lens { transform-box: view-box; transform-origin: 400px 215px; animation: lensDrift 18s ease-in-out infinite alternate; }
+    @media (prefers-reduced-motion: reduce) { .lens { animation: none !important; } }</style>
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a6ddef" /><stop offset="1" stop-color="#eef8fc" />
+    </linearGradient>
+    <linearGradient id="back2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fb3c6" /><stop offset="1" stop-color="#c9dde8" />
+    </linearGradient>
+    <linearGradient id="train2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dfe7f0" /><stop offset=".35" stop-color="#aebccb" /><stop offset="1" stop-color="#b9c6d4" />
+    </linearGradient>
+    <linearGradient id="floor2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1ead9" /><stop offset=".6" stop-color="#e0d6c0" /><stop offset="1" stop-color="#c8beac" />
+    </linearGradient>
+    <linearGradient id="strip2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffdd2e" /><stop offset="1" stop-color="#ffcf25" />
+    </linearGradient>
+    <linearGradient id="stripAmber2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7b500" /><stop offset="1" stop-color="#e79e00" />
+    </linearGradient>
+    <filter id="blur10" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10" /></filter>
+    <filter id="blur4b" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" /></filter>
+    <linearGradient id="shineG2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".9" /><stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="shirtPai" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4b8ae0" /><stop offset="1" stop-color="#2a5aa8" />
+    </linearGradient>
+    <linearGradient id="jeansPai" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a5a86" /><stop offset="1" stop-color="#27416b" />
+    </linearGradient>
+    <linearGradient id="blusaMae" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f28aa2" /><stop offset="1" stop-color="#c95473" />
+    </linearGradient>
+    <linearGradient id="kids" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd75e" /><stop offset="1" stop-color="#f0af22" />
+    </linearGradient>
+    <!-- PAI -->
+    <linearGradient id="skinPai2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe6d0" /><stop offset=".55" stop-color="#f2be95" /><stop offset="1" stop-color="#de9366" />
+    </linearGradient>
+    <radialGradient id="shadePai2" cx=".45" cy=".3" r=".9">
+      <stop offset="0" stop-color="#d39366" stop-opacity="0" /><stop offset="1" stop-color="#b06a42" stop-opacity=".5" />
+    </radialGradient>
+    <radialGradient id="blushPai2">
+      <stop offset="0" stop-color="#ff8c70" stop-opacity=".7" /><stop offset="1" stop-color="#ff8c70" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="hairPai2" x1="0" y1="0" x2=".15" y2="1">
+      <stop offset="0" stop-color="#4a392b" /><stop offset=".6" stop-color="#33261b" /><stop offset="1" stop-color="#241a12" />
+    </linearGradient>
+    <linearGradient id="hairFringeP2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c4634" /><stop offset="1" stop-color="#2b1f16" />
+    </linearGradient>
+    <radialGradient id="irisPai2" cx=".35" cy=".3" r=".9">
+      <stop offset="0" stop-color="#b8773c" /><stop offset=".55" stop-color="#8a4d1f" /><stop offset="1" stop-color="#4a2d14" />
+    </radialGradient>
+    <!-- CRIANÇA -->
+    <linearGradient id="skinKid2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffdcc0" /><stop offset=".55" stop-color="#f7bf94" /><stop offset="1" stop-color="#e49c6e" />
+    </linearGradient>
+    <radialGradient id="shadeKid2" cx=".45" cy=".3" r=".9">
+      <stop offset="0" stop-color="#d48d5e" stop-opacity="0" /><stop offset="1" stop-color="#a76a40" stop-opacity=".5" />
+    </radialGradient>
+    <radialGradient id="blushKid2">
+      <stop offset="0" stop-color="#ff8f70" stop-opacity=".8" /><stop offset="1" stop-color="#ff8f70" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="hairKid2" x1="0" y1="0" x2=".15" y2="1">
+      <stop offset="0" stop-color="#96633a" /><stop offset=".6" stop-color="#70452a" /><stop offset="1" stop-color="#54311d" />
+    </linearGradient>
+    <linearGradient id="hairFringeK2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8814f" /><stop offset="1" stop-color="#6b3f24" />
+    </linearGradient>
+    <radialGradient id="irisKid2" cx=".35" cy=".3" r=".9">
+      <stop offset="0" stop-color="#d0a14e" /><stop offset=".55" stop-color="#96641f" /><stop offset="1" stop-color="#5a3a12" />
+    </radialGradient>
+    <!-- MÃE -->
+    <linearGradient id="skinMae2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe3cf" /><stop offset=".55" stop-color="#f5c2a0" /><stop offset="1" stop-color="#e09a72" />
+    </linearGradient>
+    <radialGradient id="shadeMae2" cx=".45" cy=".3" r=".9">
+      <stop offset="0" stop-color="#db976d" stop-opacity="0" /><stop offset="1" stop-color="#b9734a" stop-opacity=".5" />
+    </radialGradient>
+    <radialGradient id="blushMae2">
+      <stop offset="0" stop-color="#ff8c70" stop-opacity=".7" /><stop offset="1" stop-color="#ff8c70" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="hairMae2" x1="0" y1="0" x2=".2" y2="1">
+      <stop offset="0" stop-color="#95663f" /><stop offset=".55" stop-color="#6d4026" /><stop offset="1" stop-color="#4a2816" />
+    </linearGradient>
+    <linearGradient id="hairFringeM2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b17c4c" /><stop offset="1" stop-color="#6b3f24" />
+    </linearGradient>
+    <radialGradient id="irisMae2" cx=".35" cy=".3" r=".9">
+      <stop offset="0" stop-color="#8faa72" /><stop offset=".55" stop-color="#55703b" /><stop offset="1" stop-color="#2f4a24" />
+    </radialGradient>
+    <linearGradient id="skirtMae2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b35572" /><stop offset="1" stop-color="#7c3350" />
+    </linearGradient>
+  </defs>
+  <g id="lens" class="lens">
+
+  <!-- CÉU -->
+  <rect width="800" height="430" fill="url(#sky2)" />
+  <rect y="112" width="800" height="64" fill="url(#back2)" />
+
+  <!-- DEFS: unidade do trem distante (repetida para movimento contínuo) -->
+  <defs>
+    <g id="trainUnit2">
+      <circle class="smoke" cx="18" cy="88" r="5" fill="#eef5fa" opacity=".5" />
+      <circle class="smoke" cx="46" cy="80" r="6" fill="#eef5fa" opacity=".4" style="animation-delay:1.8s" />
+      <g filter="url(#blur10)" fill="url(#train2)">
+        <path d="M0 118 L240 118 L352 206 L0 206 Z" />
+        <path d="M352 118 L800 118 L800 150 L520 150 Z" />
+        <path d="M240 96 L352 158 L800 158 L800 96 Z" />
+      </g>
+      <path d="M60 96 L180 96 L260 158 L60 158 Z" fill="#d7e2ec" />
+      <path d="M60 106 L240 106 L330 158 L60 158 Z" fill="#c3d1dd" />
+      <rect x="70" y="98" width="22" height="16" rx="5" fill="#38618f" />
+      <rect x="104" y="98" width="22" height="16" rx="5" fill="#38618f" />
+      <rect x="138" y="98" width="22" height="16" rx="5" fill="#38618f" />
+      <rect x="172" y="98" width="22" height="16" rx="5" fill="#38618f" />
+      <path d="M64 116 L260 116 L300 158 L30 158 Z" fill="#12a89e" />
+      <circle cx="38" cy="140" r="8" fill="#ffe27a" class="pulse" />
+      <circle cx="38" cy="140" r="14" fill="#ffd23e" opacity=".4" filter="url(#blur4b)" class="pulse" />
+      <line x1="20" y1="118" x2="40" y2="140" stroke="#ffe27a" stroke-width="3" stroke-linecap="round" opacity=".7" />
+    </g>
+  </defs>
+
+  <!-- TREM PASSANDO (dois trechos em movimento contínuo, atrás da plataforma) -->
+  <g id="trem-pass" opacity=".92">
+    <g class="slideLF"><use href="#trainUnit2" /></g>
+    <g class="slideLF2"><use href="#trainUnit2" transform="translate(800,0)" /></g>
+  </g>
+
+  <!-- PLATAFORMA -->
+  <rect y="176" width="800" height="254" fill="url(#floor2)" />
+  <g stroke="#c3b8a6" stroke-width="2" opacity=".5">
+    <line x1="90" y1="176" x2="150" y2="430" />
+    <line x1="250" y1="176" x2="320" y2="430" />
+    <line x1="420" y1="176" x2="420" y2="430" />
+    <line x1="580" y1="176" x2="520" y2="430" />
+    <line x1="730" y1="176" x2="680" y2="430" />
+  </g>
+  <rect y="176" width="800" height="9" fill="#d9d1c2" />
+
+  <!-- FAIXA AMARELA bem à frente (borda da plataforma) -->
+  <g id="faixa2">
+    <rect x="0" y="356" width="800" height="11" fill="#ffffff" opacity=".92" />
+    <rect x="0" y="367" width="800" height="13" fill="url(#strip2)" />
+    <rect x="0" y="380" width="800" height="7" fill="#f6d400" />
+    <rect x="0" y="387" width="800" height="11" fill="url(#stripAmber2)" />
+    <rect x="0" y="398" width="800" height="4" fill="#a76e00" opacity=".55" />
+    <g stroke="#fff" stroke-width="2.4" opacity=".6">
+      <line x1="48" y1="367" x2="48" y2="398" /><line x1="120" y1="367" x2="120" y2="398" />
+      <line x1="192" y1="367" x2="192" y2="398" /><line x1="264" y1="367" x2="264" y2="398" />
+      <line x1="336" y1="367" x2="336" y2="398" /><line x1="408" y1="367" x2="408" y2="398" />
+      <line x1="480" y1="367" x2="480" y2="398" /><line x1="552" y1="367" x2="552" y2="398" />
+      <line x1="624" y1="367" x2="624" y2="398" /><line x1="696" y1="367" x2="696" y2="398" />
+      <line x1="768" y1="367" x2="768" y2="398" />
+    </g>
+    <rect class="shine" x="0" y="352" width="78" height="52" fill="url(#shineG2)" />
+  </g>
+  <rect x="0" y="418" width="800" height="12" fill="#b3a896" opacity=".6" />
+
+  <!-- CORRENTE DE SEGURANÇA + POSTE de apoio -->
+  <g id="corrente">
+    <rect x="128" y="300" width="9" height="64" rx="4" fill="url(#sky2)" />
+    <rect x="128" y="300" width="9" height="64" rx="4" fill="#5c6b88" />
+    <rect x="148" y="294" width="5" height="8" rx="2" fill="#ffd400" />
+    <ellipse cx="132" cy="364" rx="14" ry="5" fill="#00000018" filter="url(#blur4b)" />
+    <g id="corrente-c">
+      <path d="M64 348 L128 348" stroke="#d8dce6" stroke-width="3" />
+      <path d="M128 348 L196 348" stroke="#d8dce6" stroke-width="3" />
+      <circle cx="64" cy="348" r="3.4" fill="#9aa4b8" />
+      <circle cx="196" cy="348" r="3.4" fill="#9aa4b8" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="-1.4 128 346; 1.4 128 346; -1.4 128 346" keyTimes="0;0.5;1" dur="3.4s" repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <!-- SOMBRAS -->
+  <g>
+    <ellipse cx="300" cy="360" rx="36" ry="7" fill="#00000028" filter="url(#blur4b)" />
+    <ellipse cx="414" cy="360" rx="23" ry="5.5" fill="#00000028" filter="url(#blur4b)" />
+    <ellipse cx="526" cy="360" rx="33" ry="6.5" fill="#00000028" filter="url(#blur4b)" />
+    <ellipse cx="654" cy="360" rx="28" ry="6" fill="#00000026" filter="url(#blur4b)" />
+  </g>
+
+  <!-- PAI -->
+  <g id="pai2" class="breath">
+    <!-- pernas (jeans) -->
+    <rect x="289" y="292" width="19" height="58" rx="9" fill="url(#jeansPai)" />
+    <rect x="316" y="292" width="19" height="58" rx="9" fill="url(#jeansPai)" />
+    <path d="M292 300 C293 320 294 336 295 348" stroke="#6487b6" stroke-width="3" fill="none" opacity=".5" stroke-linecap="round" />
+    <path d="M287 290 L333 290" stroke="#1f3352" stroke-width="2" opacity=".55" />
+    <!-- sapatos tipo sneaker com volume -->
+    <g transform="rotate(-5 298 352)">
+      <rect x="283" y="344" width="30" height="16" rx="7" fill="#39415c" />
+      <rect x="281" y="356" width="34" height="5" rx="2.5" fill="#1e2533" />
+      <rect x="304" y="347" width="5" height="7" rx="2.5" fill="#232b3a" />
+    </g>
+    <g transform="rotate(5 328 352)">
+      <rect x="313" y="344" width="30" height="16" rx="7" fill="#39415c" />
+      <rect x="311" y="356" width="34" height="5" rx="2.5" fill="#1e2533" />
+      <rect x="316" y="347" width="5" height="7" rx="2.5" fill="#232b3a" />
+    </g>
+    <!-- torso (polo azul, dobras e rim light) -->
+    <path d="M268 212 C268 254 282 300 308 300 C334 300 348 254 348 212 C348 200 336 191 308 191 C280 191 268 200 268 212 Z" fill="url(#shirtPai)" />
+    <path d="M330 191 C345 201 348 216 348 244 C347 282 334 300 308 300 L320 300 C342 286 349 250 346 210 Z" fill="#1f4a8f" opacity=".38" />
+    <path d="M270 216 C269 240 272 268 281 292" stroke="#cfe8ff" stroke-width="3" fill="none" opacity=".6" stroke-linecap="round" />
+    <path d="M312 232 C318 250 319 272 317 292" stroke="#1c3d75" stroke-width="2" fill="none" opacity=".4" stroke-linecap="round" />
+    <path d="M282 296 C292 301 324 301 334 296" stroke="#1f4a8f" stroke-width="3" fill="none" opacity=".35" />
+    <!-- colarinho + carreira de botões -->
+    <path d="M285 194 Q300 191 306 213 L296 214 Z" fill="#dfeaf5" stroke="#b6cfe6" stroke-width="1.5" />
+    <path d="M331 194 Q316 191 310 213 L320 214 Z" fill="#cdddea" stroke="#b6cfe6" stroke-width="1.5" />
+    <path d="M300 197 L307 222 L315 197" fill="none" stroke="#9db8d4" stroke-width="2.5" stroke-linejoin="round" />
+    <circle cx="307" cy="224" r="1.6" fill="#e8f3fb" />
+    <!-- braço direito segurando a criança -->
+    <path d="M342 214 C349 236 357 258 364 278 C366 283 367 286 368 288" stroke="url(#shirtPai)" stroke-width="20" fill="none" stroke-linecap="round" />
+    <ellipse cx="366" cy="286" rx="5" ry="9" transform="rotate(58 366 286)" fill="#244f96" opacity=".5" />
+    <ellipse cx="369" cy="289" rx="6" ry="8" transform="rotate(28 369 289)" fill="#f2be95" />
+    <ellipse cx="376" cy="285" rx="3.2" ry="5" transform="rotate(40 376 285)" fill="#f2be95" />
+    <path d="M372 288 C371 291 369 293 366 294" stroke="#c98557" stroke-width="1.2" fill="none" opacity=".6" />
+    <!-- braço esquerdo relaxado -->
+    <path d="M274 214 C267 236 269 260 277 282 C280 291 283 297 286 301" stroke="url(#shirtPai)" stroke-width="20" fill="none" stroke-linecap="round" />
+    <ellipse cx="285" cy="299" rx="5" ry="9" transform="rotate(-45 285 299)" fill="#244f96" opacity=".5" />
+    <ellipse cx="287" cy="301" rx="6" ry="8" transform="rotate(-30 287 301)" fill="#f2be95" />
+    <ellipse cx="281" cy="305" rx="3.2" ry="5" transform="rotate(-50 281 305)" fill="#f2be95" />
+    <!-- pescoço -->
+    <path d="M300 206 L301 222 Q308 227 315 222 L316 206 Q308 210 300 206 Z" fill="url(#skinPai2)" />
+    <!-- cabeça -->
+    <ellipse cx="277" cy="196" rx="9.5" ry="17" fill="url(#skinPai2)" />
+    <ellipse cx="277" cy="196" rx="4.4" ry="9" fill="#d9966a" opacity=".45" />
+    <ellipse cx="339" cy="196" rx="9.5" ry="17" fill="url(#skinPai2)" />
+    <ellipse cx="339" cy="196" rx="4.4" ry="9" fill="#d9966a" opacity=".45" />
+    <path d="M308 156 C327 156 340 173 340 195 C340 214 328 224 308 224 C288 224 276 214 276 195 C276 173 288 156 308 156 Z" fill="url(#skinPai2)" />
+    <path d="M285 196 C284 210 296 226 308 226 C320 226 332 210 331 196 C328 214 318 224 308 224 C298 224 288 214 285 196 Z" fill="url(#shadePai2)" opacity=".55" />
+    <path d="M282 166 C278 178 278 190 280 199" stroke="#fff1e1" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round" />
+    <path d="M280 206 C284 217 294 222 308 222 C322 222 332 217 336 206 C332 214 322 219 308 219 C294 219 284 214 280 206 Z" fill="#c98557" opacity=".18" />
+    <!-- cabelo curto com volume e brilho -->
+    <path d="M276 192 C276 156 288 134 308 134 C328 134 340 156 340 192 Q308 176 276 192 Z" fill="url(#hairPai2)" />
+    <path d="M276 190 L276 168 C269 181 263 187 257 190 C265 195 271 195 276 192 Z" fill="url(#hairPai2)" />
+    <path d="M340 190 L340 168 C347 181 353 187 359 190 C351 195 345 195 340 192 Z" fill="url(#hairPai2)" />
+    <path d="M276 178 C274 162 282 145 299 134 C283 146 278 160 281 175 C279 180 277 183 276 178 Z" fill="url(#hairFringeP2)" />
+    <path d="M286 138 C297 132 311 133 320 138 C311 134 298 134 288 138 Z" fill="#6d5640" opacity=".85" />
+    <path d="M296 135 C302 132 309 132 315 134 C310 132 302 132 296 135 Z" fill="#7d6650" opacity=".7" />
+    <path d="M280 190 C279 195 279 199 280 202" stroke="#33261b" stroke-width="2.4" fill="none" opacity=".6" />
+    <path d="M336 190 C337 195 337 199 336 202" stroke="#33261b" stroke-width="2.4" fill="none" opacity=".6" />
+    <!-- olhos, sobrancelhas, nariz e boca -->
+    <ellipse cx="296" cy="195" rx="7.6" ry="8.8" fill="#fff7ef" />
+    <ellipse cx="320" cy="195" rx="7.6" ry="8.8" fill="#fff7ef" />
+    <ellipse cx="297" cy="195.7" rx="4" ry="4.6" fill="url(#irisPai2)" />
+    <ellipse cx="319" cy="195.7" rx="4" ry="4.6" fill="url(#irisPai2)" />
+    <ellipse cx="297" cy="195.7" rx="2.4" ry="2.7" fill="#24140c" />
+    <ellipse cx="319" cy="195.7" rx="2.4" ry="2.7" fill="#24140c" />
+    <circle cx="295" cy="193.7" r="1.4" fill="#fff" />
+    <circle cx="317" cy="193.7" r="1.4" fill="#fff" />
+    <circle cx="299" cy="197.4" r="0.8" fill="#fff" opacity=".8" />
+    <circle cx="321" cy="197.4" r="0.8" fill="#fff" opacity=".8" />
+    <path d="M288 187.5 Q296 184.5 304 186.5" stroke="#2a1d12" stroke-width="1.6" fill="none" opacity=".5" />
+    <path d="M312 186.5 Q320 184.5 328 187.5" stroke="#2a1d12" stroke-width="1.6" fill="none" opacity=".5" />
+    <path d="M289.5 179 Q295 175.5 300.5 178" stroke="#2a1d12" stroke-width="2.4" fill="none" stroke-linecap="round" />
+    <path d="M315.5 178 Q321 175.5 326.5 179" stroke="#2a1d12" stroke-width="2.4" fill="none" stroke-linecap="round" />
+    <path d="M307.5 198.5 Q311.5 204.5 315.5 205.5" stroke="#d9966a" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8" />
+    <circle cx="315.5" cy="205.8" r="1" fill="#fff" opacity=".5" />
+    <path d="M297.5 208 C301.5 215.5 314.5 215.5 318.5 208 C314.9 210.6 301.1 210.6 297.5 208 Z" fill="#7c2a20" />
+    <path d="M299 208.5 L317 208.5 C315 210.8 301 210.8 299 208.5 Z" fill="#fff" />
+    <path d="M295.5 205.5 Q294 207 294.5 208.5" stroke="#7c2a20" stroke-width="1.5" fill="none" opacity=".6" />
+    <ellipse cx="290" cy="200.5" rx="4.8" ry="2.7" fill="url(#blushPai2)" />
+    <ellipse cx="326" cy="200.5" rx="4.8" ry="2.7" fill="url(#blushPai2)" />
+  
+    <ellipse class="blink-eye" cx="296" cy="195" rx="8.4" ry="8.4" fill="#f2be95" />
+    <ellipse class="blink-eye" cx="320" cy="195" rx="8.4" ry="8.4" fill="#f2be95" />
+  </g><!-- CRIANÇA (no meio, atrás da faixa, acenando para o Lipe) -->
+  <g id="crianca2" class="breath">
+    <!-- pernas (meias brancas + tênis vermelhos gordinhos) -->
+    <path d="M403 322 L403 344 Q403 349 409 349 L417 349 Q423 349 423 344 L423 322 Z" fill="url(#skinKid2)" />
+    <path d="M425 322 L425 344 Q425 349 431 349 L439 349 Q445 349 445 344 L445 322 Z" fill="url(#skinKid2)" />
+    <rect x="403" y="336" width="20" height="10" rx="3" fill="#fff" />
+    <rect x="425" y="336" width="20" height="10" rx="3" fill="#fff" />
+    <g transform="rotate(-4 408 355)">
+      <rect x="397" y="347" width="23" height="11" rx="5.5" fill="#c92f2f" />
+      <rect x="395" y="356" width="27" height="4" rx="2" fill="#f4f4f4" />
+      <rect x="414" y="350" width="5" height="6" rx="2.5" fill="#8f1d1d" />
+    </g>
+    <g transform="rotate(4 430 355)">
+      <rect x="419" y="347" width="23" height="11" rx="5.5" fill="#c92f2f" />
+      <rect x="417" y="356" width="27" height="4" rx="2" fill="#f4f4f4" />
+      <rect x="420" y="350" width="5" height="6" rx="2.5" fill="#8f1d1d" />
+    </g>
+    <!-- vestido amarelo novo -->
+    <path d="M392 246 C392 278 386 310 386 324 L442 324 C438 310 432 278 432 246 Z" fill="url(#kids)" />
+    <path d="M432 246 C436 278 438 306 436 320 L442 320 C438 306 432 278 432 246 Z" fill="#d99a12" opacity=".5" />
+    <path d="M398 248 C398 270 393 296 389 316" stroke="#ffdf7e" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round" />
+    <rect x="386" y="316" width="56" height="8" rx="4" fill="#e07b2f" />
+    <rect x="387" y="315" width="54" height="3" rx="1.5" fill="#ffcf8a" opacity=".6" />
+    <path d="M406 252 Q414 258 422 252 L420 244 Q414 248 408 244 Z" fill="#fff" />
+    <rect x="407" y="282" width="14" height="5" rx="2.5" fill="#e07b2f" />
+    <!-- pescoço -->
+    <rect x="410" y="228" width="9" height="16" rx="4" fill="url(#skinKid2)" />
+    <!-- braço esquerdo relaxado -->
+    <path d="M394 254 C387 266 384 282 386 296" stroke="url(#skinKid2)" stroke-width="9" fill="none" stroke-linecap="round" />
+    <circle cx="387" cy="298" r="5.5" fill="url(#skinKid2)" />
+    <circle cx="383.5" cy="296" r="2" fill="url(#skinKid2)" />
+    <circle cx="385" cy="301" r="2" fill="url(#skinKid2)" />
+    <!-- braço direito erguido acenando para o Lipe -->
+    <path d="M434 254 C443 247 450 239 454 229" stroke="url(#skinKid2)" stroke-width="9" fill="none" stroke-linecap="round" />
+    <g id="kArm2">
+      <circle cx="456" cy="227" r="5.5" fill="url(#skinKid2)" />
+      <circle cx="460" cy="224.5" r="2.1" fill="url(#skinKid2)" />
+      <circle cx="461" cy="229" r="2.1" fill="url(#skinKid2)" />
+      <circle cx="458" cy="231.8" r="2" fill="url(#skinKid2)" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="-9 434 254; 9 434 254; -9 434 254" keyTimes="0;0.5;1" dur="1.6s" repeatCount="indefinite" />
+    </g>
+    <!-- cabeça -->
+    <ellipse cx="392" cy="221" rx="5.4" ry="7.4" fill="url(#skinKid2)" />
+    <ellipse cx="392" cy="221" rx="2.4" ry="4.2" fill="#e49c6e" opacity=".5" />
+    <ellipse cx="436" cy="221" rx="5.4" ry="7.4" fill="url(#skinKid2)" />
+    <ellipse cx="436" cy="221" rx="2.4" ry="4.2" fill="#e49c6e" opacity=".5" />
+    <path d="M414 186 C435 186 445 199 445 213 C445 229 434 237 414 237 C394 237 383 229 383 213 C383 199 393 186 414 186 Z" fill="url(#skinKid2)" />
+    <path d="M396 213 C395 225 404 238 414 238 C424 238 433 225 432 213 C430 228 423 235 414 235 C405 235 398 228 396 213 Z" fill="url(#shadeKid2)" opacity=".5" />
+    <path d="M390 198 C387 206 386 214 387 221" stroke="#ffe6cf" stroke-width="2.4" fill="none" opacity=".55" stroke-linecap="round" />
+    <ellipse cx="392" cy="226" rx="4.6" ry="3.4" fill="url(#blushKid2)" />
+    <ellipse cx="436" cy="226" rx="4.6" ry="3.4" fill="url(#blushKid2)" />
+    <circle cx="396" cy="230" r="0.8" fill="#d98a55" opacity=".4" />
+    <circle cx="399" cy="232" r="0.8" fill="#d98a55" opacity=".4" />
+    <circle cx="431" cy="230" r="0.8" fill="#d98a55" opacity=".4" />
+    <circle cx="428" cy="232" r="0.8" fill="#d98a55" opacity=".4" />
+    <!-- cabelo com duas marias-chiquinhas e pompons -->
+    <path d="M397 212 C395 200 400 186 414 186 C428 186 433 200 431 212 Q414 200 397 212 Z" fill="url(#hairKid2)" />
+    <path d="M388 214 C385 205 383 197 379 191 C385 196 387 204 388 212 C389 215 390 215 388 214 Z" fill="url(#hairKid2)" />
+    <path d="M440 214 C443 205 445 197 449 191 C443 196 441 204 440 212 C439 215 438 215 440 214 Z" fill="url(#hairKid2)" />
+    <path d="M390 212 C392 200 402 192 414 192 C426 192 436 200 438 212 C426 199 402 199 390 212 Z" fill="url(#hairFringeK2)" />
+    <path d="M406 188 C410 186 414 186 418 187" stroke="#c9985f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".7" />
+    <path d="M391 214 C379 207 368 212 364 224 C362 232 366 236 372 236 C378 236 382 231 380 226 C382 222 386 218 393 218 Z" fill="url(#hairKid2)" />
+    <circle cx="380" cy="239" r="7" fill="#c92f2f" />
+    <circle cx="380" cy="239" r="4.5" fill="#d84545" opacity=".6" />
+    <circle cx="377" cy="230" r="2.2" fill="#2a8f7d" />
+    <path d="M437 214 C449 207 460 212 464 224 C466 232 462 236 456 236 C450 236 446 231 448 226 C446 222 442 218 435 218 Z" fill="url(#hairKid2)" />
+    <circle cx="448" cy="239" r="7" fill="#c92f2f" />
+    <circle cx="448" cy="239" r="4.5" fill="#d84545" opacity=".6" />
+    <circle cx="451" cy="230" r="2.2" fill="#2a8f7d" />
+    <!-- olhos grandes, sobrancelhas, nariz e boca -->
+    <ellipse cx="403" cy="213" rx="7.6" ry="9" fill="#fff" />
+    <ellipse cx="425" cy="213" rx="7.6" ry="9" fill="#fff" />
+    <ellipse cx="404" cy="213.6" rx="4.3" ry="5.2" fill="url(#irisKid2)" />
+    <ellipse cx="424" cy="213.6" rx="4.3" ry="5.2" fill="url(#irisKid2)" />
+    <ellipse cx="404" cy="213.6" rx="2.6" ry="3.1" fill="#24140c" />
+    <ellipse cx="424" cy="213.6" rx="2.6" ry="3.1" fill="#24140c" />
+    <circle cx="402.2" cy="211.7" r="1.5" fill="#fff" />
+    <circle cx="422.2" cy="211.7" r="1.5" fill="#fff" />
+    <circle cx="406" cy="216" r="0.9" fill="#fff" opacity=".8" />
+    <circle cx="426" cy="216" r="0.9" fill="#fff" opacity=".8" />
+    <path d="M396 205.5 Q403 203 410 205" stroke="#54311d" stroke-width="1.7" fill="none" opacity=".5" />
+    <path d="M418 205 Q425 203 432 205.5" stroke="#54311d" stroke-width="1.7" fill="none" opacity=".5" />
+    <path d="M403 223.5 Q406 225.5 409 223.5" stroke="#e49c6e" stroke-width="2" fill="none" stroke-linecap="round" />
+    <circle cx="415.5" cy="224.8" r="1" fill="#e49c6e" opacity=".8" />
+    <path d="M405 230 C410 233.5 418 233.5 423 230 C419 232.2 409 232.2 405 230 Z" fill="#9c2f22" />
+    <path d="M407 230.5 L421 230.5 C419 232 409 232 407 230.5 Z" fill="#ffb3a0" />
+  
+    <ellipse class="blink-eye" cx="403" cy="213" rx="8.3" ry="8.5" fill="#f7bf94" />
+    <ellipse class="blink-eye" cx="425" cy="213" rx="8.3" ry="8.5" fill="#f7bf94" />
+  </g><!-- MÃE (à direita, feliz, mão na cintura) -->
+  <g id="mae2" class="breath">
+    <!-- pernas (meia-calça) -->
+    <path d="M508 300 L508 346 Q508 353 515 353 L521 353 Q528 353 528 346 L528 300 Z" fill="#d9a582" />
+    <path d="M530 300 L530 346 Q530 353 537 353 L543 353 Q550 353 550 346 L550 300 Z" fill="#d9a582" />
+    <path d="M512 304 C512 322 513 336 514 348" stroke="#c98a66" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round" />
+    <path d="M536 304 C536 322 535 336 534 348" stroke="#c98a66" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round" />
+    <!-- sapatos -->
+    <path d="M501 346 Q505 357 518 356 L523 353 L517 348 Z" fill="#6e1740" />
+    <rect x="503" y="354" width="4" height="4.5" rx="1" fill="#6e1740" />
+    <path d="M551 346 Q547 357 534 356 L529 353 L535 348 Z" fill="#6e1740" />
+    <rect x="545" y="354" width="4" height="4.5" rx="1" fill="#6e1740" />
+    <!-- saia lápis azul-marinho -->
+    <path d="M501 250 C501 280 491 300 485 304 L567 304 C561 300 551 280 551 250 Z" fill="url(#skirtMae2)" />
+    <path d="M551 250 C551 280 558 298 564 304 L567 304 C561 300 551 280 551 250 Z" fill="#5c2340" opacity=".42" />
+    <path d="M508 256 C504 276 498 294 492 302" stroke="#41182f" stroke-width="1.6" fill="none" opacity=".45" stroke-linecap="round" />
+    <path d="M528 254 C526 276 524 294 522 302" stroke="#41182f" stroke-width="1.6" fill="none" opacity=".35" stroke-linecap="round" />
+    <path d="M548 256 C552 276 558 294 564 302" stroke="#8a5873" stroke-width="1.6" fill="none" opacity=".4" stroke-linecap="round" />
+    <path d="M484 302 L568 302" stroke="#5c2340" stroke-width="3" opacity=".8" />
+    <!-- torso (pele no decote) -->
+    <path d="M500 214 C500 250 499 252 499 252 L553 252 C553 252 552 250 552 214 C552 198 544 186 526 186 C508 186 500 198 500 214 Z" fill="url(#skinMae2)" />
+    <path d="M500 224 C500 250 499 252 499 252 L553 252 C553 252 552 250 552 224 C552 204 545 194 526 194 C507 194 500 204 500 224 Z" fill="url(#blusaMae)" />
+    <path d="M552 224 C552 248 554 250 554 252 L546 252 C548 242 548 224 542 200 Z" fill="#b14868" opacity=".4" />
+    <path d="M503 226 C501 240 501 248 501 250" stroke="#ffd9e6" stroke-width="3" fill="none" opacity=".5" stroke-linecap="round" />
+    <path d="M512 196 Q526 206 540 196" stroke="#b14868" stroke-width="2.5" fill="none" opacity=".6" />
+    <circle cx="526" cy="214" r="3.4" fill="#ffd76b" stroke="#e0a71e" stroke-width="1" />
+    <rect x="499" y="246" width="54" height="6" rx="3" fill="#5c2340" />
+    <rect x="521" y="244" width="10" height="10" rx="2" fill="#c9a24e" />
+    <!-- braço direito na saia -->
+    <path d="M560 220 C569 236 573 252 571 268" stroke="url(#skinMae2)" stroke-width="9" fill="none" stroke-linecap="round" />
+    <circle cx="571" cy="270" r="5.5" fill="url(#skinMae2)" />
+    <circle cx="567" cy="268" r="2" fill="url(#skinMae2)" />
+    <circle cx="569" cy="273" r="2" fill="url(#skinMae2)" />
+    <path d="M560 216 L569 228" stroke="#b14868" stroke-width="3.4" fill="none" opacity=".7" />
+    <ellipse cx="560" cy="214" rx="10" ry="14" transform="rotate(14 560 214)" fill="url(#blusaMae)" />
+    <!-- braço esquerdo com a mão na cintura -->
+    <path d="M488 222 C482 234 480 250 484 266" stroke="url(#skinMae2)" stroke-width="9" fill="none" stroke-linecap="round" />
+    <circle cx="488" cy="270" r="5.5" fill="url(#skinMae2)" />
+    <circle cx="490" cy="274" r="2" fill="url(#skinMae2)" />
+    <circle cx="486" cy="273" r="2" fill="url(#skinMae2)" />
+    <path d="M488 218 L477 230" stroke="#b14868" stroke-width="3.4" fill="none" opacity=".7" />
+    <ellipse cx="492" cy="214" rx="10" ry="14" transform="rotate(-14 492 214)" fill="url(#blusaMae)" />
+    <!-- pescoço -->
+    <path d="M520 192 L521 204 Q526 208 531 204 L532 192 Q526 196 520 192 Z" fill="url(#skinMae2)" />
+    <!-- cabeça -->
+    <ellipse cx="495" cy="202" rx="6.2" ry="8.6" fill="url(#skinMae2)" />
+    <ellipse cx="495" cy="202" rx="2.6" ry="4.6" fill="#c9845a" opacity=".5" />
+    <ellipse cx="557" cy="202" rx="6.2" ry="8.6" fill="url(#skinMae2)" />
+    <ellipse cx="557" cy="202" rx="2.6" ry="4.6" fill="#c9845a" opacity=".5" />
+    <circle cx="491" cy="213" r="2.2" fill="#c9a24e" />
+    <circle cx="561" cy="213" r="2.2" fill="#c9a24e" />
+    <path d="M526 168 C545 168 554 184 554 198 C554 216 542 224 526 224 C510 224 498 216 498 198 C498 184 507 168 526 168 Z" fill="url(#skinMae2)" />
+    <path d="M510 198 C509 212 518 226 526 226 C534 226 543 212 542 198 C540 214 534 222 526 222 C518 222 512 214 510 198 Z" fill="url(#shadeMae2)" opacity=".5" />
+    <path d="M503 180 C501 190 501 199 502 206" stroke="#ffe6d2" stroke-width="3" fill="none" opacity=".5" stroke-linecap="round" />
+    <!-- cabelo longo castanho-avermelhado -->
+    <path d="M494 196 C494 160 504 148 526 148 C548 148 558 160 558 196 Q526 176 494 196 Z" fill="url(#hairMae2)" />
+    <path d="M494 188 C488 216 484 240 484 260 C494 250 496 230 497 214 C497 204 496 196 494 188 Z" fill="url(#hairMae2)" />
+    <path d="M558 188 C564 216 568 240 568 260 C558 250 556 230 555 214 C555 204 556 196 558 188 Z" fill="url(#hairMae2)" />
+    <path d="M486 250 C480 258 476 262 474 262 L492 262 C487 258 486 254 486 250 Z" fill="url(#hairMae2)" />
+    <path d="M566 250 C572 258 576 262 578 262 L560 262 C565 258 566 254 566 250 Z" fill="url(#hairMae2)" />
+    <path d="M486 212 C478 228 474 244 472 258" stroke="#5a3117" stroke-width="2" fill="none" opacity=".45" stroke-linecap="round" />
+    <path d="M566 212 C574 228 578 244 580 258" stroke="#5a3117" stroke-width="2" fill="none" opacity=".45" stroke-linecap="round" />
+    <path d="M492 196 C493 176 500 162 514 156 C501 166 495 178 495 190 C495 194 493 195 492 196 Z" fill="url(#hairFringeM2)" />
+    <path d="M504 160 C514 154 524 152 534 154 C516 156 506 160 500 168 Z" fill="#d8a565" opacity=".45" />
+    <path d="M494 196 C494 178 502 166 512 162 C500 170 494 184 493 196 Z" fill="#c98d57" opacity=".3" />
+    <!-- sobrancelhas, olhos com cílios, nariz, boca -->
+    <ellipse cx="513" cy="196" rx="7.8" ry="8.8" fill="#fff7ef" />
+    <ellipse cx="539" cy="196" rx="7.8" ry="8.8" fill="#fff7ef" />
+    <ellipse cx="514" cy="196.6" rx="4.2" ry="5" fill="url(#irisMae2)" />
+    <ellipse cx="538" cy="196.6" rx="4.2" ry="5" fill="url(#irisMae2)" />
+    <ellipse cx="514" cy="196.6" rx="2.5" ry="2.9" fill="#24140c" />
+    <ellipse cx="538" cy="196.6" rx="2.5" ry="2.9" fill="#24140c" />
+    <circle cx="512.4" cy="194.8" r="1.5" fill="#fff" />
+    <circle cx="536.4" cy="194.8" r="1.5" fill="#fff" />
+    <circle cx="516" cy="199" r="0.9" fill="#fff" opacity=".8" />
+    <circle cx="540" cy="199" r="0.9" fill="#fff" opacity=".8" />
+    <path d="M506 188 Q513 185.5 520 187.5" stroke="#4a2816" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".7" />
+    <path d="M532 187.5 Q539 185.5 546 188" stroke="#4a2816" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".7" />
+    <path d="M521 188 L523.5 186.5" stroke="#4a2816" stroke-width="1.6" stroke-linecap="round" opacity=".7" />
+    <path d="M530.5 186.5 L533 188" stroke="#4a2816" stroke-width="1.6" stroke-linecap="round" opacity=".7" />
+    <path d="M508 182.5 Q514 180 520 182" stroke="#4a2816" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".65" />
+    <path d="M532 182 Q538 180 544 182.5" stroke="#4a2816" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".65" />
+    <path d="M524.5 199.5 Q528 204.5 527 206.5" stroke="#c9845a" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".85" />
+    <circle cx="527" cy="206.8" r="1" fill="#fff" opacity=".45" />
+    <path d="M516 210.5 Q526 217 536 210.5 Q526 215.5 516 210.5 Z" fill="#9c3a2a" />
+    <path d="M519 212 Q526 215.8 533 212" stroke="#e88a76" stroke-width="1" fill="none" opacity=".7" />
+    <ellipse cx="508" cy="208" rx="5" ry="3" fill="url(#blushMae2)" />
+    <ellipse cx="544" cy="208" rx="5" ry="3" fill="url(#blushMae2)" />
+  
+    <ellipse class="blink-eye" cx="513" cy="196" rx="8.5" ry="8.3" fill="#f5c2a0" />
+    <ellipse class="blink-eye" cx="539" cy="196" rx="8.5" ry="8.3" fill="#f5c2a0" />
+  </g><!-- LIPE observando e acenando (identidade consistente) -->
+  <g id="lipe2" class="breath">
+    <rect x="640" y="296" width="14" height="58" rx="6" fill="#0a7c75" />
+    <rect x="660" y="296" width="14" height="58" rx="6" fill="#0a7c75" />
+    <ellipse cx="633" cy="356" rx="12" ry="5.6" fill="#212d40" />
+    <ellipse cx="668" cy="356" rx="12" ry="5.6" fill="#212d40" />
+    <path d="M626 216 C626 248 638 296 654 296 L654 286 C670 296 682 248 682 216 Z" fill="#12b3a9" />
+    <path d="M680 216 C684 244 684 270 672 292 L654 288 C668 278 676 250 680 216 Z" fill="#087a74" opacity=".55" />
+    <path d="M626 222 L610 256 Q607 268 614 274" stroke="#12b3a9" stroke-width="16" stroke-linecap="round" fill="none" />
+    <circle cx="616" cy="276" r="9" fill="#ffe2ca" />
+    <path d="M680 222 L698 198 Q704 190 710 192" stroke="#0a8f88" stroke-width="16" stroke-linecap="round" fill="none" />
+    <g id="lipeArm">
+      <circle cx="712" cy="193" r="9" fill="#ffe2ca" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="-9 654 224; 9 654 224; -9 654 224" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" />
+    </g>
+    <!-- cabeça -->
+    <circle cx="654" cy="204" r="30" fill="#ffe2ca" />
+    <path d="M624 202 C624 174 638 158 654 164 C670 158 684 174 684 202 C684 186 670 176 654 176 C638 176 624 186 624 202 Z" fill="#6b4a2d" />
+    <path d="M626 194 C626 174 636 164 646 166 C632 172 624 184 622 198 Z" fill="#7d5936" />
+    <path d="M684 190 C684 172 674 162 664 164 C678 170 686 182 688 194 Z" fill="#7d5936" />
+    <!-- olhos -->
+    <g>
+      <ellipse cx="642" cy="204" rx="7.2" ry="8.2" fill="#fff" />
+      <ellipse cx="666" cy="204" rx="7.2" ry="8.2" fill="#fff" />
+      <ellipse cx="643" cy="204.6" rx="4" ry="4.8" fill="#35241a" />
+      <ellipse cx="665" cy="204.6" rx="4" ry="4.8" fill="#35241a" />
+      <circle cx="641.3" cy="202.7" r="1.9" fill="#fff" />
+      <circle cx="663.3" cy="202.7" r="1.9" fill="#fff" />
+      <circle cx="644.5" cy="207" r="1" fill="#fff" opacity=".8" />
+      <circle cx="666.5" cy="207" r="1" fill="#fff" opacity=".8" />
+    </g>
+    <path d="M635 196 Q642 193 648 195" stroke="#53341f" stroke-width="2.4" fill="none" stroke-linecap="round" />
+    <path d="M660 195 Q666 193 673 196" stroke="#53341f" stroke-width="2.4" fill="none" stroke-linecap="round" />
+    <circle cx="631" cy="214" r="4.6" fill="#ffa88f" opacity=".55" />
+    <circle cx="677" cy="214" r="4.6" fill="#ffa88f" opacity=".55" />
+    <path d="M654 218 L655 223" stroke="#53341f" stroke-width="2.4" stroke-linecap="round" />
+    <path d="M645 228 Q654 234 663 228" stroke="#8a3226" stroke-width="3.6" fill="none" stroke-linecap="round" />
+  
+    <ellipse class="blink-eye" cx="642" cy="204" rx="8" ry="7.7" fill="#ffe2ca" />
+    <ellipse class="blink-eye" cx="666" cy="204" rx="8" ry="7.7" fill="#ffe2ca" />
+  </g></g>
+</svg>
